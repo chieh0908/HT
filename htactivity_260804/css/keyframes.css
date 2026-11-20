@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+
+/*--------------手指動-------------*/
+@keyframes heartbeat {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/*--------------糖果掉-------------*/
+@keyframes fall {
+    0% {
+        top: 0%;
+        opacity: 1;
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    80% {
+        top: 50%;
+        opacity: 1;
+        transform: translateX(-50%) rotate(720deg);
+        /* 旋轉 3 圈 */
+    }
+
+    100% {
+        top: 50%;
+        opacity: 0;
+        transform: translateX(-50%) rotate(720deg);
+        /* 保持旋轉的最終角度 */
+    }
+}
+
+
+
+/*--------------鬼魂飄-------------*/
+@keyframes up {
+    0% {
+        top: 20%;
+        transform: translateX(-50%) translateX(0);
+        opacity: 0;
+    }
+
+    20% {
+        top: 18%;
+        transform: translateX(-50%) translateX(-5%);
+        opacity: 1;
+    }
+
+    40% {
+        top: 14%;
+        transform: translateX(-50%) translateX(5%);
+        opacity: 1;
+    }
+
+    60% {
+        top: 10%;
+        transform: translateX(-50%) translateX(-5%);
+        opacity: 1;
+    }
+
+    80% {
+        top: 7%;
+        transform: translateX(-50%) translateX(5%);
+        opacity: 1;
+    }
+
+    100% {
+        top: 5%;
+        transform: translateX(-50%) translateX(0);
+        opacity: 0;
+    }
+}
+
+
+
+/*--------------刮刮手-------------*/
+@keyframes hand_move {
+    0% {
+        transform: translateX(10%) translateY(14%);
+        opacity: 1;
+    }
+
+    10% {
+        transform: translateX(6%) translateY(35%);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(15%) translateY(19%);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(15%) translateY(51%);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translateX(37%) translateY(24%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(38%) translateY(63%);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateX(52%) translateY(23%);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateX(52%) translateY(65%);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateX(77%) translateY(62%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(77%) translateY(62%);
+        opacity: 0;
+    }
+}
+
+
+
+/*--------------元寶撒-------------*/
+@keyframes ch_gold {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/*--------------元寶轉-------------*/
+@keyframes ch_spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes ch_spin2 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(-360deg);
+		-ms-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}

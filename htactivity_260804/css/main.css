@@ -1,0 +1,1506 @@
+/*---- font ----*/
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Noto+Emoji&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap");
+
+/* 網頁捲軸【寬度】 */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* 網頁捲軸【背景】顏色 */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* 網頁捲軸【把手】顏色 */
+::-webkit-scrollbar-thumb {
+  background: #ff85a4;
+  border-radius: 50px;
+}
+
+/* 網頁捲軸【滑過時】把手的顏色 */
+::-webkit-scrollbar-thumb:hover {
+  background: #cf5dff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+ul,
+ol {
+  margin-bottom: 0;
+  text-align: justify;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+html,
+body {
+  position: relative;
+  font-family: "Noto Sans TC", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #181a25;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.display_none {
+  display: none;
+}
+
+/*--直式蓋板--*/
+.note_flex {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000e3;
+  z-index: 9994;
+  display: none;
+}
+
+.note_main {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  padding-bottom: 104%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff00;
+}
+
+.mia_im {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  padding-bottom: 2%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 248, 255, 0);
+}
+
+.note_flex .word_box_1 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2%;
+  top: 69%;
+  background-color: #237bd900;
+  /*--顏色標記--*/
+}
+
+.note_flex p {
+  color: rgb(255, 255, 255);
+  font-size: 5vw;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+/*--橫式--*/
+
+.kv {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.bg01 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../image/bg01.webp) no-repeat center top;
+  /*  background-size: cover; */
+  background-size: 100% auto;
+}
+
+.bg02 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../image/bg02.webp) no-repeat center top;
+  /*  background-size: cover; */
+  background-size: 100% auto;
+}
+
+.title {
+  position: relative;
+  margin-top: 1.5%;
+  width: 73%;
+  height: auto;
+}
+
+.back {
+  position: absolute;
+  width: 12%;
+  height: auto;
+  margin-top: -4%;
+  right: 3%;
+}
+
+.event {
+  position: relative;
+  padding: 1% 4.5% 0%;
+}
+
+/* 選單 */
+.select_box {
+  display: flex;
+  align-items: center;
+  width: 52%;
+}
+
+.nav_tab {
+  width: 23%;
+}
+.nav_tab:nth-of-type(2) {
+  width: 41%;
+}
+
+.player_btn,
+.monopoly_btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  background-color: #8b8b8b;
+  border: 1px solid #ffb9d7;
+  font-size: 1.8vw;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.player_btn:hover,
+.monopoly_btn:hover {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  background-color: #bf2d30;
+  border: 1px solid #ffb9d7;
+  font-size: 1.8vw;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nav_tab.active .player_btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  background-color: #bf2d30;
+  border: 1px solid #ffb9d7;
+  font-size: 1.8vw;
+  font-weight: 900;
+}
+
+.nav_tab.active .monopoly_btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  background-color: #bf2d30;
+  border: 1px solid #ffb9d7;
+  font-size: 1.8vw;
+  font-weight: 900;
+}
+
+.game_rule,
+.game_rule:hover,
+.mono_rule,
+.mono_rule:hover {
+  color: #313131;
+  font-size: 1.5vw;
+  padding: 0 2%;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* 呈現 */
+.view_box .content_box_1 {
+  display: none;
+}
+
+.view_box .content_box_2 {
+  display: none;
+}
+
+.view_box .tab_content.active {
+  display: block !important;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.top_bar {
+  display: flex;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.bind_player {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bind_player p {
+  position: relative;
+  text-align: center;
+  color: #fff9b6;
+  font-size: 1.5vw;
+  font-weight: 900;
+  padding: 1%;
+  margin-top: -9%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+/* 邀請者 */
+.inviter {
+  width: 12%;
+  margin: 0 44% 0 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.inviter p {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: 900;
+  padding: 1%;
+  margin-top: -9%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+/* 受邀者 */
+.invitee {
+  width: 58%;
+  padding: 0 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.inv_field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.inv {
+  color: #bf2d30;
+  font-size: 1.5vw;
+  font-weight: 600;
+  display: inline-block;
+  width: 30%;
+  /* text-shadow: #241111 0.1em 0.1em 0.4em; */
+  text-shadow:
+    -0.06em -0.06em 0.03em #ffffff,
+    0.06em -0.06em 0.03em #ffffff,
+    -0.06em 0.06em 0.03em #ffffff,
+    0.06em 0.06em 0.03em #ffffff,
+    0 -0.06em 0.03em #ffffff,
+    0 0.06em 0.03em #ffffff,
+    -0.06em 0 0.03em #ffffff,
+    0.06em 0 0.03em #ffffff;
+}
+
+.code {
+  color: #fff799;
+  font-size: 1.5vw;
+  font-weight: 600;
+  display: inline-block;
+  width: 40%;
+  /* text-shadow: #241111 0.1em 0.1em 0.4em; */
+  text-shadow:
+    -0.06em -0.06em 0.03em #bf2d30,
+    0.06em -0.06em 0.03em #bf2d30,
+    -0.06em 0.06em 0.03em #bf2d30,
+    0.06em 0.06em 0.03em #bf2d30,
+    0 -0.06em 0.03em #bf2d30,
+    0 0.06em 0.03em #bf2d30,
+    -0.06em 0 0.03em #bf2d30,
+    0.06em 0 0.03em #bf2d30;
+}
+
+.fourplayer {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.inv_player {
+  width: 20%;
+  margin-right: 1%;
+}
+
+.inviter img,
+.inv_player img,
+.bind_player img {
+  pointer-events: none;
+}
+
+.inv_player.off,
+.inv_player.off:hover {
+  cursor: default !important;
+  filter: saturate(0) brightness(0.7);
+}
+
+.inv_player p {
+  position: relative;
+  text-align: center;
+  padding: 1%;
+  margin-top: -9%;
+  color: #ffffff;
+  font-size: 1.2vw;
+  font-weight: 600;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.right_btn {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right_btn img {
+  margin-bottom: 2%;
+  width: 45%;
+  cursor: pointer;
+}
+
+.right_btn p {
+  color: #fff;
+  font-size: 1.5vw;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: #241111 0.1em 0.1em 0.4em;
+}
+
+.right_btn p span {
+  color: #fbe217;
+}
+
+/* 任務列表 */
+.award_list {
+  margin-top: 1%;
+  /* max-height: 38vh; */
+  max-height: min(22vw, 33vh);
+  overflow-y: scroll;
+}
+
+/* 活躍召集任務列表 */
+.award_list.old_award {
+  max-height: min(22vw, 30vh);
+}
+
+.award_list li {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: rgb(64 4 4 / 85%);
+  border: 1px solid #ff85a4;
+  padding: 0vw;
+  color: #fff;
+  margin-bottom: 0.5%;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.tasklist {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task {
+  display: inline-block;
+  width: 33%;
+  font-size: 1.5vw;
+  font-weight: 500;
+  padding: 1%;
+}
+
+.task b {
+  color: #fff9b6;
+}
+
+.planned {
+  display: inline-block;
+  width: 15%;
+  font-size: 1.3vw;
+  text-align: center;
+  padding: 1%;
+}
+
+.award {
+  display: inline-block;
+  width: 34%;
+  font-size: 1.4vw;
+  padding: 1%;
+}
+
+.award img {
+  width: 10%;
+}
+
+.award b {
+  color: #ff911a;
+}
+
+.receive {
+  display: inline-block;
+  width: 16%;
+  padding: 1%;
+}
+
+.btn_task {
+  position: relative;
+  display: flex;
+}
+
+.btn_task.off {
+  cursor: default !important;
+}
+
+.btn_task.on {
+  position: relative;
+}
+
+.btn_task.on::after {
+  content: "";
+  position: absolute;
+  right: -3%;
+  top: -8%;
+  width: 1vw;
+  height: 1vw;
+  background: #ec4f4f;
+  border-radius: 50%;
+  z-index: 1;
+  animation: light 2s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+
+@keyframes light {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          新年刮刮樂
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+
+/*刮刮卡次數*/
+.candycount {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 7%;
+  left: 2%;
+  z-index: 50;
+  background-color: #5dff5d00;
+  /*顏色標記*/
+}
+
+.candycount .count {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50vw;
+
+  filter: drop-shadow(0.1em 0.1em 1.4em #2411119c);
+}
+
+.candycount .count img {
+  width: 34%;
+}
+
+.candycount .count span {
+  margin-left: 3%;
+
+  color: #ed1e1f;
+  font-size: 1.8vw;
+  font-weight: 900;
+}
+
+.lotterybg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 44%;
+  background-color: #ce5dff00;
+  /*顏色標記*/
+
+  overflow: hidden;
+}
+
+/*刮刮卡大區*/
+.scratch_card_zone_box {
+  position: absolute;
+  width: 61%;
+  height: auto;
+  padding-bottom: 37.8%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40;
+
+  background-image: url(https://images2.iwplay.com.tw/image/ht/ingame/20250124_newyear/image/scratch_card_1.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  box-shadow: #2411119c 0.1em 0.1em 1.4em;
+}
+
+/*銀漆大區*/
+.scratch_card_zone_box .silver {
+  position: absolute;
+  width: 74%;
+  height: auto;
+  padding-bottom: 38.8%;
+
+  top: 33%;
+  left: 4.7%;
+  z-index: 3;
+  overflow: hidden;
+
+  background-color: #ce5dff00;
+  /*顏色標記*/
+}
+
+/*未刮*/
+.scratch_card_zone_box .scratch_not {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0%;
+
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+}
+
+/*手*/
+.scratch_card_zone_box .hand_ani {
+  position: absolute;
+  width: 68%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 28%;
+  left: 10%;
+  z-index: 11;
+  transform-origin: right bottom;
+
+  transform: translateX(10%) translateY(14%);
+
+  animation: hand_move 1.8s ease-in-out 0.2s forwards;
+}
+
+/*元寶撒*/
+.scratch_card_zone_box .ch_gold_ani {
+  position: absolute;
+  width: 129%;
+  height: auto;
+  padding-bottom: 61%;
+  top: 7%;
+  left: -16%;
+  z-index: 11;
+
+  pointer-events: none;
+
+  background-color: #ed1e1e00;
+  /*顏色標記*/
+
+  transform-origin: center center;
+
+  animation: ch_gold 0.8s ease-in-out forwards;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_1 {
+  position: absolute;
+  width: 9%;
+  height: auto;
+  padding-bottom: 0%;
+  top: -8%;
+  left: 12%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_2 {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 78%;
+  left: 5%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin2 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_3 {
+  position: absolute;
+  width: 8%;
+  height: auto;
+  padding-bottom: 0%;
+  top: -12%;
+  left: 58%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_4 {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 27%;
+  left: 76%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin2 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_5 {
+  position: absolute;
+  width: 11%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 84%;
+  left: 62%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_6 {
+  position: absolute;
+  width: 5%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 42%;
+  left: 61%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin2 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_7 {
+  position: absolute;
+  width: 4%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 43%;
+  left: 25%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin 1s linear infinite;
+}
+
+.scratch_card_zone_box .ch_gold_ani .ch_g_item_8 {
+  position: absolute;
+  width: 3%;
+  height: auto;
+  padding-bottom: 0%;
+  top: 73%;
+  left: 38%;
+  z-index: 11;
+
+  transform-origin: center center;
+
+  animation: ch_spin2 1s linear infinite;
+}
+
+/*刮動畫*/
+.scratch_card_zone_box .scratch_ani {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0%;
+
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+}
+
+/*已刮*/
+.scratch_card_zone_box .scratch_show {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0%;
+
+  top: 0%;
+  left: 0%;
+  z-index: 8;
+}
+
+/*手指按鈕*/
+.btn_point {
+  position: absolute;
+  width: 14%;
+  top: 64%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  animation: heartbeat 1.5s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 65;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+         小瑪莉跑馬燈
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.lotterybg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 4.5%;
+  background-color: #ce5dff00;
+  /*顏色標記*/
+  overflow: hidden;
+}
+.mary_rewards_container {
+  position: relative;
+  width: 72%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.mary_rewards_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2vw;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mary_rewards_list .reward_item {
+  width: calc(20% - 1.2vw);
+  aspect-ratio: 1 / 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.mary_rewards_list .price01 {
+  background-image: url(../image/price01.webp);
+}
+.mary_rewards_list .price02 {
+  background-image: url(../image/price02.webp);
+}
+.mary_rewards_list .price03 {
+  background-image: url(../image/price03.webp);
+}
+.mary_rewards_list .price04 {
+  background-image: url(../image/price04.webp);
+}
+.mary_rewards_list .price05 {
+  background-image: url(../image/price05.webp);
+}
+.mary_rewards_list .price06 {
+  background-image: url(../image/price06.webp);
+}
+.mary_rewards_list .price07 {
+  background-image: url(../image/price07.webp);
+}
+.mary_rewards_list .price08 {
+  background-image: url(../image/price08.webp);
+}
+.mary_rewards_list .price09 {
+  background-image: url(../image/price09.webp);
+}
+
+@keyframes maryFade {
+  0% {
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.9));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.9));
+  }
+}
+
+.mary_rewards_list .price01.active {
+  background-image: url(../image/price01-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price02.active {
+  background-image: url(../image/price02-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price03.active {
+  background-image: url(../image/price03-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price04.active {
+  background-image: url(../image/price04-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price05.active {
+  background-image: url(../image/price05-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price06.active {
+  background-image: url(../image/price06-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price07.active {
+  background-image: url(../image/price07-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price08.active {
+  background-image: url(../image/price08-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+.mary_rewards_list .price09.active {
+  background-image: url(../image/price09-p.webp);
+  animation: maryFade 1s ease-in-out infinite;
+  z-index: 3;
+}
+
+.mary_controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  margin: 0 auto;
+  margin-top: 2vw;
+  width: 80%;
+}
+
+.mary_controls .btn_draw_mary {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 28%;
+  filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.64));
+}
+
+.mary_controls .btn_draw_mary:hover {
+  /* transform: scale(1.05); */
+  /* filter: brightness(1.05); */
+}
+
+.mary_controls .btn_draw_mary img {
+  width: 100%;
+  height: auto;
+}
+
+.mary_controls .draw_count_info {
+  font-size: 1.6vw;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          彈窗們
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.modal {
+  backdrop-filter: blur(3px);
+  background-color: #0000008a;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.modal-body {
+  padding: 0vw;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-body .con {
+  /* padding: 2vw; */
+  padding: 0 7vw 0 0;
+  /* height: 30vw; */
+  height: 100%;
+  line-height: 1.8;
+  overflow: auto;
+}
+
+.modal-body .con h5 {
+  color: #ffea9f;
+  font-size: 1.6vw;
+  margin-bottom: 0;
+}
+
+.modal-body .con p {
+  color: #fff;
+  font-size: 1.2vw;
+  margin-bottom: 2%;
+}
+
+.modal.show .modal-dialog {
+  transform: translate(-50%, -50%);
+}
+
+.modal .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 30vw;
+  pointer-events: auto;
+  background: url(../image/modalbg.webp) no-repeat center top;
+  background-size: 100% 100%;
+  background-clip: padding-box;
+  /* border: 2px solid #ff911a; */
+  outline: 0;
+}
+
+.modal .popup_close {
+  position: absolute;
+  right: 3%;
+  top: -7%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 8%;
+}
+
+.player_rule_modal .headbg,
+.mono_rule_modal .headbg {
+  position: absolute;
+  top: -11%;
+  left: -4%;
+  width: 64%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.player_rule_modal .bottombg,
+.mono_rule_modal .bottombg {
+  position: absolute;
+  bottom: -3%;
+  right: -4%;
+  width: 64%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.share_modal .headbg {
+  position: absolute;
+  top: -11%;
+  left: -4%;
+  width: 64%;
+  z-index: -1;
+}
+
+.share_modal .bottombg {
+  position: absolute;
+  bottom: -4%;
+  right: -4%;
+  width: 64%;
+  z-index: -1;
+}
+
+.enter_code_modal .headbg {
+  position: absolute;
+  top: -12%;
+  left: -4%;
+  width: 64%;
+  z-index: -1;
+}
+
+.enter_code_modal .bottombg {
+  position: absolute;
+  bottom: -4%;
+  right: -4%;
+  width: 64%;
+  z-index: -1;
+}
+
+/* 規則 */
+
+.player_rule_modal .modal-body {
+  /* overflow-y: auto; */
+  overflow: hidden;
+  padding: 6vw 0 3vw 2vw;
+}
+
+.player_rule_modal .modal-body ol li {
+  font-size: 0.9vw;
+  color: #fff;
+  list-style: inherit;
+}
+
+.player_rule_modal .modal-body li span {
+  color: #cf5dff;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          刮刮卡規則_彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.mono_rule_modal .modal-body {
+  /* overflow-y: scroll; */
+  padding: 6vw 0 3vw 2vw;
+  overflow: hidden;
+}
+
+.mono_rule_modal .modal-body ol {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+.mono_rule_modal .modal-body ol li {
+  font-size: 1.3vw;
+  color: #fff;
+  list-style: inherit;
+  padding-bottom: 2%;
+}
+
+.mono_rule_modal .modal-body p span {
+  color: #cf5dff;
+}
+
+.mono_rule_modal table {
+  width: 67%;
+  font-size: 1vw;
+  color: #fff;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-color: #ff911a;
+  background-color: #00000045;
+}
+
+.mono_rule_modal table > :not(:last-child) > :last-child > * {
+  border-bottom-color: #ff911a;
+}
+
+.mono_rule_modal table thead {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mono_rule_modal table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mono_rule_modal table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mono_rule_modal table img {
+  width: 6%;
+  height: auto;
+  margin-right: 2%;
+}
+
+.mono_rule_modal .table > :not(caption) > * > * {
+  padding: 0.5vw;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.mono_rule_modal .modal-body .con h5 span {
+  font-size: 2vw;
+  color: #cf5dff;
+  font-weight: 900;
+}
+
+/* .mono_rule_modal table td img {
+    width: 3vw;
+    height: 3vw;
+}
+ */
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          分享_彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.share_modal .info {
+  position: absolute;
+  bottom: 3.5%;
+  left: 14%;
+}
+
+.share_modal .info p {
+  color: #fff;
+  font-size: 1.1vw;
+  /* text-shadow: 2px 2px 2px #e63932; */
+  text-shadow:
+    0 0 0.25em #fd1810,
+    0 0 0.5em #fd1810,
+    0 0 0.75em #fd1810;
+}
+
+.share_modal .popup_save {
+  position: absolute;
+  right: -22%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          邀請好友_彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+
+.eventAlert .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* width: 30vw;
+  height: 16vw; */
+  width: 45vw;
+  height: auto;
+  aspect-ratio: 779/272;
+  pointer-events: auto;
+  background: url(../image/modalbg_inv.webp) no-repeat center top;
+  background-size: 100% 100%;
+  background-clip: padding-box;
+  /* border: 2px solid #ff911a; */
+  outline: 0;
+}
+
+/* .eventAlert .headbg {
+  position: absolute;
+  top: -18%;
+  left: -4%;
+  width: 56%;
+  z-index: -1;
+} */
+
+.eventAlert .bottombg {
+  position: absolute;
+  bottom: -7%;
+  right: 0;
+  width: 82%;
+  z-index: -1;
+}
+
+.eventAlert .bottombg img,
+.eventAlert .popup_close img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.eventAlert .modal-body .bodytt {
+  font-size: 1.6vw;
+  font-weight: 900;
+  color: #ffea9f;
+  text-align: center;
+}
+
+.eventAlert .modal-body .bodycontent {
+  font-size: 1.5vw;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3%;
+}
+
+.eventAlert .modal-body {
+  padding: 2vw;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventAlert .popup_close {
+  position: absolute;
+  right: 3%;
+  top: -13%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 9%;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          跑馬燈抽獎_獲得獎勵_彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.mono_pop_modal .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 20vw;
+  pointer-events: auto;
+  background: url(../image/modalbg_get.webp) no-repeat center top;
+  background-size: 100% 100%;
+  background-clip: padding-box;
+  /* outline: 2px solid #ff911a; */
+}
+
+.mono_pop_modal .modal-body {
+  padding: 3vw;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.mono_pop_modal .popup_close {
+  position: absolute;
+  right: 3%;
+  top: -8%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 11%;
+}
+
+/* 強制解決 iOS Safari 圖片高度繼承 100% 導致的嚴重拉伸跑版問題 */
+.mono_pop_modal .popup_close img,
+.mono_pop_modal .headbg img,
+.mono_pop_modal .bottombg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mono_pop_modal .headbg {
+  position: absolute;
+  top: -17%;
+  left: 0;
+  width: 64%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mono_pop_modal .bottombg {
+  position: absolute;
+  bottom: -5%;
+  right: 0;
+  width: 89%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mono_pop_modal .modal-body .bodytt {
+  font-size: 1.6vw;
+  font-weight: 600;
+  color: #ff911a;
+  text-align: center;
+}
+
+.mono_pop_modal .modal-body .bodycontent {
+  font-size: 1.5vw;
+  text-align: center;
+  color: #fff9b6;
+  margin-bottom: 3%;
+}
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+          輸入邀請碼_彈窗
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.enter_code_modal .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 30vw;
+  pointer-events: auto;
+  background: url(../image/modalbg.webp) no-repeat center top;
+  background-size: 100% 100%;
+  background-clip: padding-box;
+  border: 2px solid #ff911a;
+  outline: 0;
+}
+
+.enter_code_modal .modal-body .bodycontent {
+  font-size: 1.5vw;
+  text-align: center;
+  color: #fff;
+}
+
+.enter_code_modal .modal-body p span {
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #fff9b6;
+}
+
+.codett {
+  font-size: 1.6vw;
+  color: #fff9b6;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+
+.verification-code {
+  position: relative;
+  text-align: center;
+  margin: 1% auto;
+}
+
+.verification-code--inputs input[type="text"] {
+  font-size: 1.5vw;
+  font-weight: 900;
+  border: 1px solid #fff9b6;
+  color: #fff9b6;
+  background-color: #000000d6;
+  width: 4vw;
+  height: 4vw;
+  padding: 0vw;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.enter_code_modal .join_btn {
+  width: 13vw;
+  display: block;
+  margin: 3% auto;
+}
+
+/*--直式--*/
+@media screen and (orientation: portrait) {
+  .note_flex {
+    display: block;
+  }
+
+  /*--橫式--*/
+  .kv {
+    display: none;
+  }
+}
+
+/*--橫式--*/
+@media screen and (orientation: landscape) {
+  .note_flex {
+    display: none;
+  }
+
+  .kv {
+    display: block;
+  }
+}
