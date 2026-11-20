@@ -1,0 +1,2381 @@
+/*---- news_list ----*/
+.latestnews,
+.newsdetails,
+.mmd {
+  padding-top: 90px;
+  padding-bottom: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.mmd {
+  padding-bottom: 35px;
+}
+
+.latestnews,
+.newsdetails {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/features/bg.jpg)
+    no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.latestnews .container,
+.newsdetails .container {
+  position: relative;
+  padding: 0 35px 45px;
+  background: rgba(213, 226, 236, 0.7);
+}
+
+.latestnews::before,
+.newsdetails::before,
+.mmd::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: skew 7s ease-in-out infinite;
+}
+
+@keyframes skew {
+  0% {
+    transform: skewY(0deg);
+  }
+
+  25% {
+    transform: skewY(-2deg);
+  }
+
+  50% {
+    transform: skewY(0deg);
+  }
+
+  75% {
+    transform: skewY(-2deg);
+  }
+
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+/*---- .latestnews::before, .newsdetails::before, .mmd::before {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/lantern.png) no-repeat center top;
+  background-size: 100%;
+}----*/
+.latestnews_list {
+  border-bottom: 1px solid #292e31;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.latestnews_list li {
+  display: inline-block;
+  position: relative;
+}
+
+.latestnews_list li a,
+.latestnews_list li.active:hover a {
+  display: block;
+  padding: 8px 30px;
+  color: #292e31;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.latestnews_list li:hover a {
+  color: #292e31;
+}
+
+.latestnews_list li.active a,
+.latestnews_list li.active:hover a {
+  color: #ffffff;
+  background: #292e31;
+}
+
+.latestnews-titleurl {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  display: block;
+  padding: 20px;
+  width: 100%;
+  color: #292e31;
+  transition: 0.5s;
+}
+
+.latestnews-titleurl:hover {
+  color: initial;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.latestnews-titleurl:hover .tt {
+  color: initial;
+}
+
+.latestnews-title {
+  display: -webkit-box;
+  font-size: 18px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  margin-bottom: 0.5rem;
+  line-height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: justify;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.newsdetails-badge,
+.newsdetails-newsbadge,
+.newsdetails-sysbadge {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 4px 15px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.newsdetails-newsbadge,
+.latestnews .newsdetails-newsbadge {
+  background: linear-gradient(-45deg, transparent 5px, #e51737 0) right,
+    linear-gradient(135deg, transparent 5px, #e51737 0) left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.newsdetails-sysbadge,
+.newsdetails .newsdetails-sysbadge {
+  background: linear-gradient(-45deg, transparent 5px, #3a92cb 0) right,
+    linear-gradient(135deg, transparent 5px, #3a92cb 0) left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.newsdetails-actbadge,
+.newsdetails .newsdetails-actbadge {
+  background: linear-gradient(-45deg, transparent 5px, #66950b 0) right,
+    linear-gradient(135deg, transparent 5px, #66950b 0) left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.newstime {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: 0;
+  opacity: 0.6;
+}
+
+/*---- news_content ----*/
+/*.newsdetails .newsdetails-contents img, .newsdetails .newsdetails-contents table, .embed-responsive {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}*/
+.newsdetails-title {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.newsdetails-badge {
+  font-size: 16px;
+}
+
+.newsdetails-contents {
+  margin-top: 1rem;
+}
+
+.newsdetails-contents h3 {
+  margin: 1.5rem 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e51737;
+}
+
+.newsdetails .newsdetails-contents p {
+  margin: 1rem auto;
+}
+
+.newsdetails .newsdetails-contents ol {
+  padding-left: 22px;
+}
+
+.newsdetails .newsdetails-contents a {
+  color: #3a92cb;
+  font-weight: bold;
+}
+
+.newsdetails .newsdetails-contents table td {
+  border: 1px solid #3a92cb;
+  padding: 10px;
+  background: #fff;
+}
+
+.newsdetails .newsdetails-contents table tr:first-child td {
+  color: #fff;
+  font-weight: bold;
+  background: #3a92cb;
+}
+
+.backto {
+  margin: 40px auto 15px;
+}
+
+.backto a {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  max-width: 200px;
+  color: #fff;
+  text-align: center;
+  background: #292e31;
+  transition: 0.5s;
+}
+
+.backto a:hover {
+  text-decoration: none;
+  filter: brightness(1.2);
+}
+
+/*---- pagination ----*/
+.pagination ul {
+  display: flex;
+  margin: 50px auto 15px;
+  font-family: Microsoft JhengHei, Arial, sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.pagination ul li a {
+  border: 1px solid #292e31;
+  margin: 0 -0.5px;
+  padding: 12px 17px;
+  color: #292e31;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+
+.pagination ul li a:hover,
+.pagination ul li.active a {
+  border: 1px solid #292e31;
+  color: #fff;
+  text-decoration: none;
+  background: #292e31;
+}
+
+/*---- world ----*/
+.world,
+.portrait {
+  position: relative;
+  padding: 90px 0 35px;
+  height: 59rem;
+}
+
+.world .title {
+  z-index: 2;
+}
+
+.world .mask {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/mask.png)
+    no-repeat center top;
+  background-size: cover;
+  opacity: 0;
+}
+
+.worldview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.worldview .swiper-slide .sec_bg {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.worldview .swiper-slide-active .sec_bg {
+  transform: translate(-50%, -50%) scale(1.16);
+  transition: transform 5s ease-in-out;
+}
+
+.swiper-slide-active.w1 .sec_bg {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/world01.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.swiper-slide-active.w2 .sec_bg {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/world02.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.swiper-slide-active.w3 .sec_bg {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/world03.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.swiper-slide-active.w4 .sec_bg {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/world04.jpg)
+    no-repeat center bottom;
+  background-size: cover;
+}
+
+.world_txt,
+.world_list {
+  position: absolute;
+  max-width: 750px;
+  width: 100%;
+  left: 50%;
+  bottom: 50px;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.world_txt {
+  padding: 0 25px;
+  max-width: 700px;
+  bottom: 130px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.95));
+  opacity: 0;
+}
+
+.swiper-slide-active .world_txt,
+.world .swiper-slide-active .mask {
+  opacity: 1;
+}
+
+.world_txt span {
+  color: #ffeb61;
+}
+
+.world_title {
+  margin-bottom: 30px;
+}
+
+.world_list {
+  bottom: 50px;
+}
+
+.world_list li {
+  display: inline-block;
+  position: relative;
+  margin: 0 1%;
+  padding-bottom: 7.5%;
+  width: 22.5%;
+  height: auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/btn.png)
+    no-repeat center top;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.world_list li.bullet_active,
+.world_list li:hover {
+  color: #292e31;
+  font-weight: 600;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/btn_active.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.world_list li span {
+  position: absolute;
+  margin-top: -0.1rem;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*---- portrait ----*/
+.portrait .title {
+  z-index: 2;
+}
+
+.portrait .mask {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/mask_sub.png)
+    no-repeat center bottom;
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.role {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.role_content {
+  height: 100%;
+}
+
+.swiper-slide-active .role_info {
+  top: 18.5%;
+  opacity: 1;
+  z-index: 2;
+}
+
+.role_content .sec_bg.b1 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/bg01.jpg)
+    no-repeat center top;
+  background-size: cover;
+  -webkit-animation: breath 80s infinite linear;
+  animation: breath 80s infinite linear;
+  opacity: 1;
+}
+
+.role_content .sec_bg.b2 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/bg02.jpg)
+    no-repeat center top;
+  background-size: cover;
+  -webkit-animation: bg_change 15s infinite linear, breath 80s infinite linear;
+  animation: bg_change 15s infinite linear, breath 80s infinite linear;
+  opacity: 0;
+}
+
+@keyframes bg_change {
+  48% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes breath {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.role_content .role_img {
+  margin-top: 60px;
+  height: calc(100% - 60px);
+}
+
+.role_content .r1 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role01.png)
+    no-repeat center bottom;
+}
+
+.role_content .r2 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role02.png)
+    no-repeat center bottom;
+}
+
+.role_content .r3 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role03.png)
+    no-repeat center bottom;
+}
+
+.role_content .r5 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role05.png)
+    no-repeat center bottom;
+}
+
+.role_content .r6 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role06.png)
+    no-repeat center bottom;
+}
+
+.role_content .r7 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role07.png)
+    no-repeat center bottom;
+}
+
+.role_content .r8 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role08.png)
+    no-repeat center bottom;
+}
+
+.role_content .r9 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role09.png)
+    no-repeat center bottom;
+}
+
+.role_content .r10 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role10.png)
+    no-repeat center bottom;
+}
+
+.role_content .r11 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role11.png)
+    no-repeat center bottom;
+}
+
+.role_content .r12 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role12.png)
+    no-repeat center bottom;
+}
+
+.role_content .r13 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role13.png)
+    no-repeat center bottom;
+}
+
+.role_content .r14 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role14.png)
+    no-repeat center bottom;
+}
+
+.role_content .r15 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role15.png)
+    no-repeat center bottom;
+}
+
+.role_content .r16 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role16.png)
+    no-repeat center bottom;
+}
+
+.role_content .r17 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role17.png)
+    no-repeat center bottom;
+}
+
+.role_content .r18 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role18.png)
+    no-repeat center bottom;
+}
+
+.role_content .r19 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role19.png)
+    no-repeat center bottom;
+}
+
+.role_content .r20 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role20.png)
+    no-repeat center bottom;
+}
+
+.role_content .r21 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role21.png)
+    no-repeat center bottom;
+}
+
+.role_content .r22 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role22.png)
+    no-repeat center bottom;
+}
+
+.role_content .r23 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role23.png)
+    no-repeat center bottom;
+}
+
+.role_content .r24 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role24.png)
+    no-repeat center bottom;
+}
+
+.role_content .r25 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role25.png)
+    no-repeat center bottom;
+}
+
+.role_content .r26 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role26.png)
+    no-repeat center bottom;
+}
+
+.role_content .r27 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role27.png)
+    no-repeat center bottom;
+}
+
+.role_content .r28 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role28.png)
+    no-repeat center bottom;
+}
+
+.role_content .r29 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role29.png)
+    no-repeat center bottom;
+}
+
+.role_content .r30 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role30.png)
+    no-repeat center bottom;
+}
+
+.role_content .r31 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role31.png)
+    no-repeat center bottom;
+}
+
+.role_content .r32 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role32.png)
+    no-repeat center bottom;
+}
+
+.role_content .r33 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role33.png)
+    no-repeat center bottom;
+}
+
+.role_content .r34 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role34.png)
+    no-repeat center bottom;
+}
+
+.role_content .r35 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role35.png)
+    no-repeat center bottom;
+}
+
+.role_content .r36 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role36.png)
+    no-repeat center bottom;
+}
+
+.role_content .r37 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role37.png)
+    no-repeat center bottom;
+}
+
+.role_content .r39 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role39.png)
+    no-repeat center bottom;
+}
+
+.role_content .r40 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role40.png)
+    no-repeat center bottom;
+}
+
+.role_content .r41 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role41.png)
+    no-repeat center bottom;
+}
+
+.role_content .r42 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role42.png)
+    no-repeat center bottom;
+}
+
+.role_content .r43 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role43.png)
+    no-repeat center bottom;
+}
+
+.role_content .r45 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role45.png)
+    no-repeat center bottom;
+}
+
+.role_content .r46 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role46.png)
+    no-repeat center bottom;
+}
+
+.role_content .r47 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role47.png)
+    no-repeat center bottom;
+}
+
+.role_content .r48 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role48.png)
+    no-repeat center bottom;
+}
+
+.role_content .r49 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role49.png)
+    no-repeat center bottom;
+}
+
+.role_content .r50 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role50.png)
+    no-repeat center bottom;
+}
+
+.role_content .r51 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role51.png)
+    no-repeat center bottom;
+}
+
+.role_content .r52 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role52.png)
+    no-repeat center bottom;
+}
+
+.role_content .r53 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role53.png)
+    no-repeat center bottom;
+}
+
+.role_content .r54 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role54.png)
+    no-repeat center bottom;
+}
+
+.role_content .r55 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role55.png)
+    no-repeat center bottom;
+}
+
+.role_content .r56 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role56.png)
+    no-repeat center bottom;
+}
+
+.role_content .r57 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role57.png)
+    no-repeat center bottom;
+}
+.role_content .r58 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role58.png)
+    no-repeat center bottom;
+}
+
+.role_content .role_img {
+  opacity: 0;
+  background-size: contain;
+}
+
+.role_content .swiper-slide-active .role_img {
+  opacity: 1;
+}
+
+.role_bottom {
+  position: absolute;
+  padding: 0 3rem;
+  max-width: 1000px;
+  width: 100%;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.role_list {
+  position: relative;
+  margin-top: initial;
+  padding: initial;
+  width: initial;
+  bottom: initial;
+}
+
+.role_list .swiper-slide {
+  display: inline-block;
+  width: 112px;
+  height: 126px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.role_list .swiper-slide.r1 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list01.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .swiper-slide-active.r1,
+.role_list .swiper-slide.r1:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list01_active.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .swiper-slide.r2 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list02.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .swiper-slide-active.r2,
+.role_list .swiper-slide.r2:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list02_active.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .swiper-slide.r3 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list03.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r3,
+.role_list .swiper-slide.r3:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list03_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r5 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list05.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r5,
+.role_list .swiper-slide.r5:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list05_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r6 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list06.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r6,
+.role_list .swiper-slide.r6:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list06_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r7 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list07.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r7,
+.role_list .swiper-slide.r7:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list07_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r8 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list08.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r8,
+.role_list .swiper-slide.r8:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list08_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r9 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list09.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r9,
+.role_list .swiper-slide.r9:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list09_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r10 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list10.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r10,
+.role_list .swiper-slide.r10:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list10_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r11 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list11.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r11,
+.role_list .swiper-slide.r11:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list11_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r12 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list12.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r12,
+.role_list .swiper-slide.r12:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list12_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r13 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list13.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r13,
+.role_list .swiper-slide.r13:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list13_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r14 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list14.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r14,
+.role_list .swiper-slide.r14:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list14_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r15 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list15.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r15,
+.role_list .swiper-slide.r15:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list15_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r16 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list16.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r16,
+.role_list .swiper-slide.r16:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list16_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r17 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list17.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r17,
+.role_list .swiper-slide.r17:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list17_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r18 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list18.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r18,
+.role_list .swiper-slide.r18:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list18_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r19 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list19.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r19,
+.role_list .swiper-slide.r19:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list19_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r20 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list20.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r20,
+.role_list .swiper-slide.r20:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list20_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r21 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list21.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r21,
+.role_list .swiper-slide.r21:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list21_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r22 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list22.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r22,
+.role_list .swiper-slide.r22:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list22_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r23 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list23.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r23,
+.role_list .swiper-slide.r23:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list23_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r24 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list24.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r24,
+.role_list .swiper-slide.r24:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list24_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r25 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list25.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r25,
+.role_list .swiper-slide.r25:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list25_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r26 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list26.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r26,
+.role_list .swiper-slide.r26:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list26_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r27 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list27.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r27,
+.role_list .swiper-slide.r27:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list27_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r28 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list28.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r28,
+.role_list .swiper-slide.r28:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list28_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r29 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list29.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r29,
+.role_list .swiper-slide.r29:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list29_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r30 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list30.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r30,
+.role_list .swiper-slide.r30:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list30_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r31 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list31.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r31,
+.role_list .swiper-slide.r31:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list31_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r32 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list32.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r32,
+.role_list .swiper-slide.r32:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list32_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r33 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list33.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r33,
+.role_list .swiper-slide.r33:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list33_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r34 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list34.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r34,
+.role_list .swiper-slide.r34:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list34_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r35 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list35.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r35,
+.role_list .swiper-slide.r35:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list35_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r36 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list36.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r36,
+.role_list .swiper-slide.r36:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list36_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r37 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list37.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r37,
+.role_list .swiper-slide.r37:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list37_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r39 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list39.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r39,
+.role_list .swiper-slide.r39:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list39_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r40 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list40.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r40,
+.role_list .swiper-slide.r40:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list40_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r41 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list41.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r41,
+.role_list .swiper-slide.r41:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list41_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r42 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list42.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r42,
+.role_list .swiper-slide.r42:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list42_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r43 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list43.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r43,
+.role_list .swiper-slide.r43:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list43_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r45 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list45.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r45,
+.role_list .swiper-slide.r45:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list45_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r46 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list46.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r46,
+.role_list .swiper-slide.r46:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list46_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r47 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list47.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r47,
+.role_list .swiper-slide.r47:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list47_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r48 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list48.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r48,
+.role_list .swiper-slide.r48:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list48_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r49 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list49.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r49,
+.role_list .swiper-slide.r49:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list49_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r50 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list50.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r50,
+.role_list .swiper-slide.r50:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list50_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r51 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list51.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r51,
+.role_list .swiper-slide.r51:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list51_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r52 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list52.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r52,
+.role_list .swiper-slide.r52:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list52_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r53 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list53.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r53,
+.role_list .swiper-slide.r53:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list53_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r54 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list54.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r54,
+.role_list .swiper-slide.r54:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list54_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r55 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list55.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r55,
+.role_list .swiper-slide.r55:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list55_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r56 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list56.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r56,
+.role_list .swiper-slide.r56:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list56_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r57 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list57.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r57,
+.role_list .swiper-slide.r57:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list57_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide.r58 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list58.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .swiper-slide-active.r58,
+.role_list .swiper-slide.r58:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list58_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_prev,
+.role_next {
+  position: absolute;
+  width: 29px;
+  height: 43px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/arrow.png)
+    no-repeat center top;
+  background-size: cover;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+  cursor: pointer;
+  z-index: 1;
+}
+
+.role_prev {
+  left: 0rem;
+}
+
+.role_next {
+  right: 0rem;
+  transform: scaleX(-1) translateY(-50%);
+}
+
+/*---- gallary ----*/
+.gallary {
+  position: relative;
+  padding: 90px 0 35px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/bg.jpg)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.gallary .content {
+  margin-top: 2.5rem;
+  max-width: 900px;
+}
+
+.picture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.picture .img-fluid {
+  height: inherit;
+}
+
+.painter {
+  position: absolute;
+  margin-top: 105%;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+
+.picture:hover .painter {
+  margin-top: 0;
+}
+
+.painter p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.painter p span {
+  display: block;
+  color: #57d9ff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*---- mmd ----*/
+.mmd {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/features/bg.jpg)
+    no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mmd .content {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.mmd_item {
+  display: inline-block;
+  margin: 0.5% 0.3%;
+  width: 13%;
+}
+
+@media only screen and (max-width: 1600px) {
+  .latestnews::before,
+  .newsdetails::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .world,
+  .portrait {
+    height: 47rem;
+  }
+
+  .role_content .role_img {
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+
+  .role_info {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .newsdetails-title,
+  .newsdetails .newstime,
+  .newsdetails-contents,
+  .backto {
+    padding: 0 15px;
+  }
+
+  .role_bottom {
+    max-width: 700px;
+  }
+
+  .mmd_item {
+    width: 16%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .latestnews,
+  .newsdetails,
+  .gallary {
+    background-position: 30% top;
+  }
+
+  .latestnews,
+  .newsdetails,
+  .mmd {
+    background-size: 100%;
+    background-attachment: initial;
+    background-color: #7498cd;
+  }
+
+  .latestnews_list,
+  .latestnews-single,
+  .newsdetails-title,
+  .newsdetails .newstime,
+  .newsdetails-contents,
+  .backto {
+    margin: 0 auto;
+    max-width: 770px;
+  }
+
+  .newsdetails-title {
+    margin-top: 30px;
+  }
+
+  .backto {
+    margin: 40px auto 15px;
+  }
+
+  .backto a {
+    margin: 0 auto;
+  }
+
+  .world,
+  .portrait {
+    height: 59rem;
+  }
+
+  .role_info {
+    margin-top: 5rem;
+  }
+
+  .role_content .role_img {
+    background-position: 65% top !important;
+  }
+
+  .role_list {
+    margin-top: initial;
+  }
+
+  .role_prev,
+  .role_next {
+    width: 20px;
+    height: 30px;
+  }
+
+  .mmd {
+    padding-bottom: 0;
+  }
+
+  .mmd .container {
+    padding-bottom: 35px;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      #fbe5b6 55%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .role_list {
+    margin-top: initial;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .latestnews-title {
+    -webkit-line-clamp: 2;
+  }
+
+  .worldview .swiper-slide .sec_bg {
+    transform: translate(-50%, -45%);
+  }
+
+  .worldview .swiper-slide-active .sec_bg {
+    transform: translate(-50%, -50%);
+    transition: transform 5s ease-in-out;
+  }
+
+  .world_txt {
+    top: 62%;
+    bottom: initial;
+    max-width: 550px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .world_title {
+    margin: 0 auto 3%;
+  }
+
+  .world_list {
+    max-width: 350px;
+  }
+
+  .world_list li {
+    padding-bottom: 15%;
+    width: 45.5%;
+    height: auto;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .role_bottom {
+    padding: 0 4rem;
+  }
+
+  .role_list {
+    max-width: initial;
+  }
+
+  .role_list .swiper-slide {
+    padding-bottom: 22%;
+    width: 20%;
+    height: 22%;
+  }
+
+  .role_prev {
+    left: 15px;
+  }
+
+  .role_next {
+    right: 15px;
+  }
+
+  .mmd .content {
+    max-width: 550px;
+  }
+
+  .mmd_item {
+    margin: 0.7% 0.2%;
+    width: 23.5%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .latestnews,
+  .newsdetails {
+    padding: 90px 0 35px;
+    padding-bottom: 0;
+  }
+
+  .latestnews,
+  .newsdetails,
+  .mmd {
+    background-size: 200%;
+  }
+
+  .latestnews .container,
+  .newsdetails .container {
+    padding: 0 20px 35px;
+  }
+
+  .latestnews_list li a {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  .latestnews-title,
+  .newsdetails-title {
+    font-size: 16px;
+  }
+
+  .newsdetails-title {
+    margin-top: 25px;
+  }
+
+  .newsdetails-newsbadge,
+  .newsdetails-sysbadge,
+  .backto a {
+    font-size: 14px;
+  }
+
+  .ellipsis,
+  .newsdetails-contents {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .newstime {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .backto {
+    margin: 35px auto 5px;
+  }
+
+  .backto a {
+    padding: 12px 20px;
+    max-width: 160px;
+  }
+
+  .pagination ul li a {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .world {
+    padding: 75px 0 35px;
+    height: 45rem;
+  }
+
+  .world .mask {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/world/mask_m.png)
+      no-repeat center bottom;
+    background-size: cover;
+  }
+
+  .world_txt {
+    top: 55%;
+  }
+
+  .world_title {
+    max-width: 220px;
+  }
+
+  .world_list {
+    bottom: 4%;
+  }
+
+  .world_list li {
+    margin: 0.5%;
+  }
+
+  .portrait {
+    padding: 0 0 35px;
+    height: 46rem;
+  }
+
+  .portrait .role_info {
+    margin-top: 11rem;
+  }
+
+  .role_txt {
+    height: auto;
+  }
+
+  .role_txt1 {
+    height: auto;
+  }
+
+  .role_txt p {
+    margin-bottom: 0;
+  }
+
+  .role_txt1 p {
+    margin-bottom: 0;
+  }
+
+  .role .role_content .r1 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role01_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r2 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role02_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r3 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role03_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r5 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role05_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r6 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role06_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r7 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role07_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r8 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role08_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r9 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role09_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r10 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role10_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r11 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role11_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r12 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role12_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r13 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role13_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r14 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role14_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r15 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role15_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r16 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role16_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r17 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role17_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r18 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role18_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r19 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role19_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r20 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role20_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r21 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role21_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r22 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role22_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r23 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role23_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r24 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role24_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r25 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role25_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r26 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role26_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r27 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role27_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r28 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role28_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r29 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role29_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r30 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role30_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r31 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role31_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r32 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role32_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r33 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role33_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r34 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role34_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r35 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role35_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r36 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role36_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r37 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role37_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r38 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role38_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r39 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role39_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r40 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role40_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r41 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role41_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r42 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role42_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r43 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role43_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r45 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role45_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r46 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role46_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r47 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role47_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r48 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role48_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r49 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role49_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r50 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role50_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r51 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role51_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r52 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role52_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r53 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role53_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r54 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role54_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r55 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role55_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r56 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role56_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_content .r57 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role57_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+  .role_content .r58 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role58_m.png)
+      no-repeat center top;
+    background-size: cover;
+  }
+
+  .role_bottom {
+    padding: 0 3rem;
+    bottom: 2.5rem;
+  }
+
+  .role_list .swiper-slide {
+    padding-bottom: 36%;
+  }
+
+  .gallary .title {
+    max-width: 250px;
+  }
+
+  .gallary .content,
+  .mmd .content {
+    margin: 1.5rem auto 0;
+    max-width: 440px;
+  }
+
+  .picture .img-fluid {
+    height: auto;
+  }
+
+  .painter p {
+    font-size: 14px;
+  }
+
+  .painter p span {
+    font-size: 16px;
+  }
+
+  .mmd .title {
+    max-width: 280px;
+  }
+
+  .mmd_item {
+    margin: 1.5% 1%;
+    width: 30.5%;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .mmd_item {
+    margin: 1% 0.5%;
+    width: 30.5%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .portrait {
+    padding-bottom: 20px;
+    height: 42rem;
+  }
+
+  .role_bottom {
+    bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .latestnews_list li a {
+    padding: 8px 10px;
+  }
+
+  .pagination ul {
+    margin: 40px auto 20px;
+  }
+
+  .pagination ul li a {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .world_list li {
+    font-size: 4.6vw;
+  }
+
+  .portrait {
+    height: 38rem;
+  }
+
+  .portrait .role_info {
+    margin-top: 8rem;
+  }
+}
