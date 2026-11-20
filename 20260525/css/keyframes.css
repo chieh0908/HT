@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+
+/*飄飄*/
+@keyframes fly1 {
+    0% {
+        transform: translateY(10%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+
+@keyframes fly2 {
+    0% {
+        transform: translateY(-7%);
+    }
+
+    50% {
+        transform: translateY(3%);
+    }
+
+    100% {
+        transform: translateY(-7%);
+    }
+}
+
+
+@keyframes fly3 {
+    0% {
+        transform: translateY(12%);
+    }
+
+    50% {
+        transform: translateY(-2%);
+    }
+
+    100% {
+        transform: translateY(12%);
+    }
+}
+
+
+/*星星*/
+@keyframes kirakira00 {
+    0% {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+
+    100% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+}
+
+
+/*LV1_大標*/
+@keyframes logo_in_309 {
+    0% {
+        filter: blur(50px) brightness(20);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0px) brightness(1);
+        opacity: 1;
+    }
+}
+
+/*攻擊按鈕*/
+@keyframes bounceInlight350 {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+        filter: drop-shadow(0 0 1rem #fff);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        filter: drop-shadow(0 0 2rem #fff);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        filter: drop-shadow(0 0 1rem #fff);
+    }
+}
+
+
+@keyframes arrowAni_325 {
+    0% {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(7%);
+    }
+}
+
+/*動雲*/
+@keyframes move-clouds-back {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 10000px 0;
+    }
+}
+
+
+
+/*攻擊文字*/
+@keyframes up_350 {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-279%);
+    }
+}
+
+
+
+
+
+/*飄羽毛*/
+@keyframes sway {
+    0% {
+        transform: rotateZ(-15deg) rotateX(55deg);
+    }
+
+    50% {
+        transform: rotateZ(20deg) rotateX(60deg);
+        animation-timing-function: ease-in-out;
+    }
+
+    100% {
+        transform: rotateZ(-15deg) rotateX(55deg);
+        animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.435);
+    }
+}
+
+@keyframes fall {
+    0% {
+        /*-webkit-filter: drop-shadow(0px 60px 40px rgba(0, 0, 0, 0));*/
+    }
+
+    100% {
+        top: 120%;
+        /*-webkit-filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));*/
+    }
+}

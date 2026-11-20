@@ -1,0 +1,947 @@
+@charset "utf-8";
+
+/*---- common ----*/
+@import url('https://ids.iwplay.com.tw/includ/footer/footer.css');
+
+
+*,
+a,
+span {
+    font-family: 'Noto Sans TC', Arial, Helvetica, 微軟正黑體, Microsoft JhengHei, sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+
+
+/*====卷軸===*/
+/* 細捲軸開始 */
+::-webkit-scrollbar {
+    height: 5px;
+    overflow: visible;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5865f2;
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 0px;
+    min-height: 28px;
+    padding: 100px 0 0;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0), inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5865f2;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #5865f2;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* 細捲軸結束 */
+
+
+
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.display_none {
+    display: none;
+}
+
+/*禁止滑動*/
+.modal-open {
+    overflow: hidden !important;
+    padding-right: 0 !important;
+}
+
+
+
+/*--大背景--*/
+.wrapper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0%;
+    overflow: hidden;
+
+    background-color: #19181e;
+}
+
+.pc_none {
+    display: none;
+}
+
+.mo_none {
+    display: block;
+}
+
+
+
+@media (max-width:767px) {
+    .mo_none {
+        display: none;
+    }
+
+    .pc_none {
+        display: block;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            主視覺區域
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.kv_zone {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 52%;
+    background-color: rgb(49, 1, 1);
+
+    background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/kv/kv_pc.webp);
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center 50%;
+}
+
+.kv_zone .big_title {
+    position: absolute;
+    width: 37vw;
+    height: auto;
+    right: 6vw;
+    bottom: 11vw;
+}
+
+/* 前往綁定按鈕 */
+.kv_zone .down_btn {
+    position: absolute;
+    width: 27vw;
+    height: auto;
+    right: 11vw;
+    bottom: 8vw;
+}
+
+.kv_zone .down_btn img {
+    animation: fly2 5s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
+}
+
+@keyframes fly2 {
+    0% {
+        transform: translateY(50%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(50%);
+    }
+}
+
+/* 線 */
+.kv_zone .line {
+    position: absolute;
+    width: 100%;
+    height: 2.5vw;
+    right: 0%;
+    bottom: 0;
+    animation: eggBottoomBg 25s infinite linear;
+    background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/kv/line.webp);
+    background-repeat: repeat-x;
+    background-size: 100% 2.5vw;
+}
+
+.kv_zone .line img {
+    display: none;
+}
+
+@keyframes eggBottoomBg {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -189.4vw 0;
+    }
+}
+
+
+.kv_zone .snslink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    width: 14%;
+    right: 1%;
+    top: 1%;
+    z-index: 5;
+}
+
+.kv_zone .snslink a {
+    margin: 0 0.2vw;
+}
+
+.kv_zone .snslink a:hover {
+    filter: brightness(1.3);
+}
+
+
+.kv_zone .logo {
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+}
+
+.kv_zone .logo a {
+    display: block;
+    width: 14vw;
+}
+
+.kv_zone .logo a:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.5);
+}
+
+.kv_zone .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    opacity: 0.4;
+    /* transform: rotate(0.5turn);
+    filter: hue-rotate(90deg) brightness(1.2) contrast(1.5); */
+}
+
+.kv_zone .video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width:1470px) {}
+
+
+/*@media (max-width:1100px) {
+	.kv_zone {
+		padding-bottom: 135%;
+		background-color: rgb(21, 185, 226);
+	}
+}*/
+
+
+@media (max-width:767px) {
+    .kv_zone {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 185%;
+        background-image: url(https://images3.iwplay.com.tw/image/ht/events/20260525/image/kv/kv_mo.webp);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: rgb(255, 255, 255);
+        background-position: top center;
+    }
+
+    .kv_zone .big_title {
+        width: 101vw;
+        right: -2vw;
+        bottom: 32vw;
+    }
+
+    .kv_zone .down_btn {
+        width: 77vw;
+        right: 10.5vw;
+        bottom: 23vw;
+    }
+
+    .kv_zone .line {
+        height: 8vw;
+        width: 100vw;
+        background-size: auto 100%;
+    }
+
+    .kv_zone .logo {
+        top: -1.2vw;
+        left: -2vw;
+    }
+
+    .kv_zone .logo a {
+        width: 35vw;
+    }
+
+    .kv_zone .snslink {
+        width: 50%;
+    }
+
+    .kv_zone .snslink a {
+        margin: 0 0.3vw;
+    }
+
+
+}
+
+/*--↑主視覺區域↑--*/
+
+
+
+
+
+
+
+
+
+
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            登入區塊_區域
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.events_2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 47.8%;
+    background-color: rgb(1, 31, 49);
+
+    background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/event2/bg_pc.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+}
+
+
+/*中央*/
+.events_2 .main_center {
+    position: absolute;
+    width: 72vw;
+    height: auto;
+    padding-bottom: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 60;
+    background-color: rgba(226, 21, 21, 0);
+    /*顏色標記*/
+}
+
+
+
+
+/*大標*/
+.events_2 .big_title {
+    position: absolute;
+    width: 38vw;
+    height: auto;
+    padding-bottom: 0%;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 65;
+}
+
+.events_2 .big_title_m {
+    display: none;
+}
+
+
+
+/*登入區*/
+.events_2 .main_center .frame_out {
+    position: absolute;
+    width: 56vw;
+    height: auto;
+    padding-bottom: 45%;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 63;
+
+    background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/event2/out_frame_pc.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.events_2 .btn_box {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 63;
+    background-color: #09a13c00;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.events_2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.events_2 .btn_box .btn_disconnect,
+.events_2 .btn_box .btn_logout {
+    height: 5%;
+    margin: auto 2%;
+}
+
+
+/* 登入內容 */
+
+.events_2 .main_center .connect_area {
+    position: absolute;
+    width: 91%;
+    height: 70%;
+    top: 9.5%;
+    left: 4.15%;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #a1410900;
+}
+
+/* .events_2 .main_center .connect_area .connect picture {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: rgba(0, 255, 255, 0);
+} */
+
+.events_2 .main_center .connect_area .connect {
+    width: 25%;
+    aspect-ratio: 500 / 93;
+    padding: 0;
+    background-image: url(https://images3.iwplay.com.tw/image/ht/events/20251114/image/event2/connect.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.events_2 .main_center .connect_area .ht_acct,
+.events_2 .main_center .connect_area .dc_acct {
+    width: 30%;
+    height: 100%;
+    margin: 0 2%;
+    background-color: #58f26000;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events_2 .main_center .connect_area .title {
+    /*width: 50%;*/
+    height: 23px;
+    aspect-ratio: 250 / 39;
+    margin: 10px auto;
+}
+
+.events_2 .main_center .connect_area .icon {
+    width: 70%;
+}
+
+.events_2 .main_center .connect_area .login_acct {
+    width: 80%;
+    height: 40%;
+    background-color: #6f58f200;
+    padding: 2% 0;
+}
+
+.events_2 .main_center .connect_area .login_acct .log_befor,
+.events_2 .main_center .connect_area .login_acct .log_after {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.events_2 .main_center .connect_area .login_acct .log_befor {
+    background-color: #f258a000;
+}
+
+.events_2 .main_center .connect_area .login_acct .log_after {
+    background-color: #f2a25800;
+}
+
+
+.events_2 .main_center .connect_area .login_acct .log_after p,
+.events_2 .main_center .connect_area .login_acct .log_after p {
+    text-align: center;
+    /* margin: 2% auto; */
+    margin: 0;
+    font-size: 1vw;
+}
+
+.events_2 .main_center .connect_area .login_acct .display_none {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1470px) {
+    .events_2 {
+        padding-bottom: 55%;
+        background-size: 120%;
+    }
+
+    /*登入區*/
+    .events_2 .main_center .frame_out {
+        width: 66vw;
+        padding-bottom: 48%;
+        top: 22%;
+    }
+
+    .events_2 .main_center .connect_area {
+        height: 80%;
+    }
+
+    .events_2 .main_center .connect_area .login_acct {
+        width: 90%;
+        height: 55%;
+    }
+
+    .events_2 .main_center .connect_area .login_acct .log_after p,
+    .events_2 .main_center .connect_area .login_acct .log_after p {
+        font-size: 1.3vw;
+    }
+
+    .events_2 .btn_box {
+        top: 86%;
+        width: 40vw;
+    }
+}
+
+@media (max-width:1200px) {
+    .events_2 {
+        padding-bottom: 75%;
+        background-size: 158%;
+    }
+
+    .events_2 .big_title {
+        width: 60vw;
+        top: 5%;
+    }
+
+    .events_2 .main_center .frame_out {
+        width: 90vw;
+        padding-bottom: 65%;
+        top: 20%;
+    }
+
+    .events_2 .btn_box {
+        top: 85%;
+        width: 50vw;
+    }
+
+    .events_2 .main_center .connect_area .login_acct .log_after p,
+    .events_2 .main_center .connect_area .login_acct .log_after p {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width:900px) {
+
+    .events_2 .main_center .connect_area .login_acct .log_after p,
+    .events_2 .main_center .connect_area .login_acct .log_after p {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width:767px) {
+    .events_2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 246%;
+        background-color: #44338300;
+        background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/event2/bg_mo.webp);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+    }
+
+    .events_2 .big_title {
+        display: none;
+    }
+
+    .events_2 .big_title_m {
+        display: block;
+        position: absolute;
+        width: 90vw;
+        height: auto;
+        padding-bottom: 0%;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 65;
+    }
+
+    /*登入區*/
+    .events_2 .main_center .frame_out {
+        width: 90vw;
+        top: 17%;
+        background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/event2/out_frame_mo.webp);
+        padding-bottom: 242%;
+
+    }
+
+    .events_2 .btn_box {
+        top: 91%;
+        width: 90vw;
+    }
+
+    .events_2 .main_center .connect_area {
+        flex-direction: column;
+        width: 88.3%;
+        left: 5.8%;
+        height: 93.7%;
+        top: 3.2%;
+    }
+
+    .events_2 .main_center .connect_area .connect {
+        width: 17%;
+        height: auto;
+        aspect-ratio: 300 / 650;
+        background-image: url(https://images3.iwplay.com.tw/image/ht/events/20251114/image/event2/connect_m.webp);
+        background-color: #91438000;
+    }
+
+    .events_2 .main_center .connect_area .ht_acct,
+    .events_2 .main_center .connect_area .dc_acct {
+        width: 80%;
+        height: 44%;
+    }
+
+    .events_2 .main_center .connect_area .icon {
+        width: 40%;
+    }
+
+    .events_2 .main_center .connect_area .login_acct {
+        width: 100%;
+        padding: 4% 0;
+    }
+
+    .events_2 .main_center .connect_area .login_acct .log_befor {
+        padding: 0 7%;
+    }
+
+    .events_2 .main_center .connect_area .login_acct .log_after p,
+    .events_2 .main_center .connect_area .login_acct .log_after p {
+        font-size: 3.2vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            規則說明
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+.events_3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 46%;
+    background-color: rgb(255, 255, 255);
+
+    background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/event3/bg_pc.webp);
+    background-repeat: no-repeat;
+    background-size: 108%;
+    background-position: center top;
+}
+
+
+/*中央*/
+.events_3 .main_center {
+    position: absolute;
+    width: 72vw;
+    height: auto;
+    padding-bottom: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 60;
+    background-color: rgba(226, 21, 21, 0);
+    /*顏色標記*/
+}
+
+
+
+/*大標*/
+.events_3 .big_title {
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    padding-bottom: 0%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 65;
+}
+
+/*大標*/
+.events_3 .frame_out {
+    position: absolute;
+    width: 56vw;
+    height: 60%;
+    padding-bottom: 0%;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 65;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(208, 218, 248, 0.5) 100%);
+    border: 3px solid #fff;
+
+}
+
+.events_3 .frame_out .rule {
+    width: 96%;
+    height: 94%;
+    overflow-y: scroll;
+    margin: 2% 1% 1% 2%;
+    background-color: #09a13c00;
+}
+
+/*文字*/
+.events_3 .frame_out .rule h4 {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 153%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: #5865f2;
+    font-weight: 500;
+    margin-top: 0.5%;
+    margin-left: -3%;
+    text-align: left;
+    /*text-shadow: #ffffff 0.1em 0.1em 0.4em, #ffffff 0.1em 0.1em 0.4em;*/
+}
+
+.events_3 .frame_out .rule p {
+    margin-left: 4%;
+    margin-right: 2%;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1vw;
+    line-height: 180%;
+    margin-block-start: 0em;
+    margin-block-end: 0.8em;
+    color: #404040;
+    font-weight: 500;
+    margin-top: 0.5%;
+    text-align: left;
+    letter-spacing: 0.15vw;
+    /*text-shadow: #ffffff 0.1em 0.1em 0.4em, #ffffff 0.1em 0.1em 0.4em;*/
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1470px) {
+    .events_3 {
+        padding-bottom: 51%;
+        background-size: 120%;
+    }
+
+    /*登入區*/
+    .events_3 .main_center .frame_out {
+        width: 66vw;
+        height: 65%;
+        top: 28%;
+    }
+}
+
+
+@media (max-width:1200px) {
+    .events_3 {
+        padding-bottom: 60%;
+        background-size: 141%;
+    }
+
+    .events_3 .big_title {
+        width: 60vw;
+        top: 8%;
+    }
+
+    /*登入區*/
+    .events_3 .main_center .frame_out {
+        width: 90vw;
+        height: 65%;
+        top: 28%;
+    }
+
+    .events_3 .frame_out .rule h4 {
+        font-size: 2vw;
+    }
+
+    .events_3 .frame_out .rule p {
+        font-size: 1.5vw;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:767px) {
+    .events_3 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 190%;
+        background-color: #ffffff;
+        background-image: url(https://images1.iwplay.com.tw/image/ht/events/20260525/image/event3/bg_mo.webp);
+        background-repeat: no-repeat;
+        background-size: 112%;
+        background-position: top center;
+    }
+
+    .events_3 .big_title {
+        width: 90vw;
+        top: 8%;
+    }
+
+    /*登入區*/
+    .events_3 .main_center .frame_out {
+        width: 90vw;
+        height: 70%;
+        top: 23%;
+    }
+
+    .events_3 .frame_out .rule h4 {
+        font-size: 4.8vw;
+    }
+
+    .events_3 .frame_out .rule p {
+        font-size: 4vw;
+        font-weight: 400;
+        margin-block-end: 1.2em;
+        letter-spacing: 0.3vw;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+/*▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            footer
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀*/
+footer {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+footer p,
+footer ul {
+    opacity: 1;
+}
+
+.footer .company>img {
+    width: 122px;
+    height: auto;
+}
+
+footer img {
+    width: initial;
+    height: initial;
+}
+
+@media (max-width:1100px) {
+    footer {
+        /* padding-bottom: 16%; */
+    }
+}
+
+
+@media (max-width:767px) {
+    footer {
+        /* padding-bottom: 35%; */
+    }
+}
