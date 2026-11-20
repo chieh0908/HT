@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no, date=no"
+    />
+
+    <!-- CSS -->
+    <style>
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      table {
+        border: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* iOS */
+      a[x-apple-data-detectors],
+      .unstyle-auto-detected-links a,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      u+#body a,
+        /* Gmail */
+        #MessageViewBody a
+
+        /* Samsung Mail */ {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      .im {
+        color: inherit !important;
+      }
+
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+
+      img.g-img + div {
+        display: none !important;
+      }
+
+      /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+      @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+        u ~ div .email-container {
+          min-width: 320px !important;
+        }
+      }
+
+      /* iPhone 6, 6S, 7, 8, and X */
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        u ~ div .email-container {
+          min-width: 375px !important;
+        }
+      }
+
+      /* iPhone 6+, 7+, and 8+ */
+      @media only screen and (min-device-width: 414px) {
+        u ~ div .email-container {
+          min-width: 414px !important;
+        }
+      }
+    </style>
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+
+    <style>
+      code {
+        padding: 1px 5px;
+        background-color: #eff0f1;
+        color: #242729;
+        font-size: 13px;
+        line-height: inherit;
+        font-family: "PingFang TC", 微軟正黑體, "Microsoft JhengHei", Helvetica,
+          Arial, sans-serif;
+      }
+
+      pre {
+        margin: 0 0 15px;
+        line-height: 17px;
+        background-color: #eff0f1;
+        padding: 4px 8px;
+        border-radius: 3px;
+        overflow-x: auto;
+      }
+
+      pre code {
+        margin: 0 0 15px;
+        padding: 0;
+        line-height: 17px;
+        background-color: none;
+      }
+
+      blockquote {
+        margin: 0 0 15px;
+        padding: 4px 10px;
+        background-color: #fff8dc;
+        border-left: 2px solid #ffeb8e;
+      }
+
+      blockquote p {
+        padding: 4px 0;
+        margin: 0;
+        overflow-wrap: break-word;
+      }
+
+      .bar {
+        border-radius: 5px;
+      }
+
+      .btr {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .bbr {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      @media screen and (max-width: 680px) {
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+        }
+
+        .stack-column-center {
+          text-align: center !important;
+        }
+
+        .hide-on-mobile {
+          display: none !important;
+          max-height: 0 !important;
+          overflow: hidden !important;
+          visibility: hidden !important;
+        }
+
+        .sm-p-none {
+          padding: 0 !important;
+        }
+
+        .sm-pt-none {
+          padding-top: 0 !important;
+        }
+
+        .sm-pb-none {
+          padding-bottom: 0 !important;
+        }
+
+        .sm-pr-none {
+          padding-right: 0 !important;
+        }
+
+        .sm-pl-none {
+          padding-left: 0 !important;
+        }
+
+        .sm-px-none {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .sm-py-none {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        .sm-p {
+          padding: 20px !important;
+        }
+
+        .sm-pt {
+          padding-top: 20px !important;
+        }
+
+        .sm-pb {
+          padding-bottom: 20px !important;
+        }
+
+        .sm-pr {
+          padding-right: 20px !important;
+        }
+
+        .sm-pl {
+          padding-left: 20px !important;
+        }
+
+        .sm-px {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+
+        .sm-py {
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+
+        .sm-mb {
+          margin-bottom: 20px !important;
+        }
+
+        .bar,
+        .btr,
+        .bbr {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    width="100%"
+    style="
+      margin: 0;
+      padding: 0 !important;
+      mso-line-height-rule: exactly;
+      background-color: #ffffff;
+      background-position: top center;
+      background-repeat: no-repeat;
+    "
+  >
+    <center
+      style="
+        width: 100%;
+        background-color: #ffffff;
+        background-position: top center;
+        background-repeat: no-repeat;
+      "
+    >
+      <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+    <tr>
+    <td>
+    <![endif]-->
+      <div class="email-container" style="max-width: 600px; margin: 0 auto">
+        <!--[if mso]>
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+        <table
+          aria-hidden="true"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          role="presentation"
+          style="max-width: 600px; width: 100%"
+        >
+          <!-- EMAIL -->
+          <tr>
+            <td>
+              <img
+                src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/edm_1.png"
+                alt="《幻塔》6.0福利快訊"
+                style="width: 100%; height: auto; display: block; background-color: #49499d;"
+                class="g-img"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.hotta.com.tw/" target="_blank">
+                <img
+                  src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/edm_2.png"
+                  width="600"
+                  alt="立即前往 幻塔 官網"
+                  style="
+                    width: 100%;
+                    max-width: 600px;
+                    height: auto;
+                    display: block;
+                    background-color: #49499d;
+                  "
+                  class="g-img"
+                  title="立即前往 幻塔 官網"
+                />
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://hotta.pse.is/EDM1125" target="_blank">
+                <img
+                  src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/edm_3.png"
+                  width="600"
+                  alt="立即下載 幻塔"
+                  style="
+                    width: 100%;
+                    max-width: 600px;
+                    height: auto;
+                    display: block;
+                    background-color: #49499d;
+                  "
+                  class="g-img"
+                  title="立即下載 幻塔"
+                />
+              </a>
+            </td>
+          </tr>
+         
+          <tr>
+            <td>
+              <img
+                src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/edm_4.png"
+                width="600"
+                alt="《幻塔》6.0福利快訊"
+                style="
+                  width: 100%;
+                  max-width: 600px;
+                  height: auto;
+                  display: block;
+                  background-color: #49499d;
+                "
+                class="g-img"
+                title="《幻塔》6.0福利快訊"
+              />
+            </td>
+          </tr>
+          <!--文字輸入區域-->
+          <tr>
+            <td style="
+                  padding: 0px 20px;
+                  text-align: center;
+                  background-color: #3f4181;
+                ">
+                
+              <p style="
+                    margin: 0px auto;
+                    font-family: 'PingFang TC', 微軟正黑體, 'Microsoft JhengHei',
+                      Helvetica, Arial, sans-serif;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    line-height: 25px;
+                    background-color: #3f4181;
+                  ">
+                永生赤核自選箱 II 全系限定範圍：莎樂迪、萊可西絲、南斗、艾斯特、阿格蕾婭、海倫、拉娜、奈美西斯•裂空。
+
+              </p>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img
+                src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/edm_6.png"
+                width="600"
+                alt="《幻塔》6.0福利快訊"
+                style="
+                  width: 100%;
+                  max-width: 600px;
+                  height: auto;
+                  display: block;
+                  background-color: #49499d;
+                "
+                class="g-img"
+                title="《幻塔》6.0福利快訊"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td style="
+                  padding: 0px 20px;
+                  text-align: center;
+                  background-color: #3f4181;
+                ">
+                
+              <p style="
+                    margin: 0px auto;
+                    font-family: 'PingFang TC', 微軟正黑體, 'Microsoft JhengHei',
+                      Helvetica, Arial, sans-serif;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    line-height: 24.5px;
+                    background-color: #3f4181;
+                  ">
+                限定SSR自選箱範圍：阿斯拉達、灰狐、克勞迪婭•風暴眼、梅麗爾•鎧。詳細可兌換範圍請以遊戲內為準。
+
+              </p>
+
+            </td>
+          </tr>
+
+         <!--文字輸入區域結束-->
+
+          <tr>
+            <td>
+              <img
+                src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/edm_008.png"
+                alt="《幻塔》6.0福利快訊"
+                style="width: 100%; height: auto; display: block"
+                class="g-img"
+              />
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td
+              style="padding: 40px 30px 30px; background-color: #001028"
+              class="sm-p"
+            >
+              <!-- SnsLink -->
+              <table
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+                width="auto"
+              >
+                <tr>
+                  <td style="padding: 0 15px 10px">
+                    <a
+                      href="https://www.facebook.com/iwplay.ht"
+                      target="_blank"
+                    >
+                      <img
+                        alt="幻塔facebook"
+                        src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/facebook.png"
+                        style="
+                          display: block;
+                          width: 55px;
+                          height: 55px;
+                          border: 0px;
+                        "
+                        title="幻塔facebook"
+                    /></a>
+                  </td>
+
+                  <td style="padding: 0 15px 10px">
+                    <a
+                      href="https://www.youtube.com/channel/UCTeBich1WhotKaz6fYNKwNQ?sub_confirmation=1"
+                      target="_blank"
+                    >
+                      <img
+                        alt="幻塔youtube"
+                        src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/youtube.png"
+                        style="
+                          display: block;
+                          width: 55px;
+                          height: 55px;
+                          border: 0px;
+                        "
+                        title="幻塔youtube"
+                    /></a>
+                  </td>
+
+                  <td style="padding: 0 15px 10px">
+                    <a href="https://discord.gg/HEBhZXhxwS" target="_blank">
+                      <img
+                        alt="幻塔discord"
+                        src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/discord.png"
+                        style="
+                          display: block;
+                          width: 55px;
+                          height: 55px;
+                          border: 0px;
+                        "
+                        title="幻塔discord"
+                    /></a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- 服務條款 隱私權政策 -->
+              <table
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+                width="180px"
+              >
+                <tr>
+                  <td style="padding: 36px 0px">
+                    <a
+                      href="https://www.iwplay.com.tw/pdf/contract.pdf"
+                      target="_blank"
+                    >
+                      <img
+                        alt="艾玩天地互動娛樂科技股份有限公司 服務條款"
+                        src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/footer_l.png"
+                        style="display: block; width: 90px; border: 0px"
+                        title="艾玩天地互動娛樂科技股份有限公司 服務條款"
+                      />
+                    </a>
+                  </td>
+                  <td style="padding: 36px 0px">
+                    <a
+                      href="https://www.iwplay.com.tw/pdf/privacy.pdf"
+                      target="_blank"
+                    >
+                      <img
+                        alt="艾玩天地互動娛樂科技股份有限公司 隱私權政策"
+                        src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/footer_r.png"
+                        style="display: block; width: 90px; border: 0px"
+                        title="艾玩天地互動娛樂科技股份有限公司 隱私權政策"
+                      />
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CopyRight -->
+              <table
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+                width="100%"
+              >
+                <tr>
+                  <td
+                    style="
+                      padding: 5px 0px;
+                      text-align: center;
+                      background-color: #001028;
+                    "
+                  >
+                    <img
+                      src="https://images1.iwplay.com.tw/image/ht/edm/20260519/images/copyright.png"
+                      alt="艾玩天地"
+                      border="0"
+                      width="320"
+                      height="65"
+                      style="display: block; margin: 0 auto"
+                      title="艾玩天地"
+                    />
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CopyRight -->
+              <table
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+                width="100%"
+              >
+                <tr>
+                  <td
+                    style="
+                      font-size: 12px;
+                      line-height: 15px;
+                      font-family: Arial, 'PingFang TC', 微軟正黑體,
+                        'Microsoft JhengHei', Helvetica, sans-serif;
+                      color: #fff;
+                      text-align: center;
+                      background-color: #001028;
+                    "
+                  >
+                    <span style="opacity: 0"
+                      >©Hotta Studio, distributed and operated by Iwplay
+                      World.</span
+                    >
+                  </td>
+                </tr>
+              </table>
+
+              <!--字數-->
+              <table
+                align="center"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+                width="100%"
+              >
+                <tr>
+                  <td
+                    style="
+                      font-size: 6px;
+                      line-height: 15px;
+                      font-family: Arial, 'PingFang TC', 微軟正黑體,
+                        'Microsoft JhengHei', Helvetica, sans-serif;
+                      color: #fff;
+                      text-align: center;
+                      background-color: #001028;
+                    "
+                  >
+                    <span style="opacity: 0"
+                      >艾玩天地保有以上活動及獎項內容修改之權利，並有權決定修改、取消、暫停或終止活動及贈送內容，最新詳情請見官網公告。所有活動獎勵物品皆為綁定不可交易，亦不得要求兌換、折抵或轉換其它產品，逾時未兌換視同放棄獎勵以及兌換權利。</span
+                    >
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--[if mso]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+  </body>
+</html>
