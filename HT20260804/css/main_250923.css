@@ -1,0 +1,2362 @@
+﻿/*---- common ----*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap");
+@import url("https://ids.iwplay.com.tw/includ/footer/footer.css");
+
+/*---- basic ----*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+html,
+body {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  word-break: break-word;
+  background: linear-gradient(to left, #4e789c, #a4bbd3);
+}
+
+header,
+nav,
+section {
+  width: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.scene .role .r2 {
+  transform: translate3d(0px, 0px, 0px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: relative;
+  display: block;
+  left: -300px;
+  top: 80px;
+}
+
+/*---- pop-ads ----*/
+.pop-ads {
+  text-align: center;
+}
+
+.pop-ads img {
+  width: 90%;
+}
+
+header,
+section {
+  position: relative;
+  padding: 3.5% 0;
+}
+
+header .header_p img {
+  width: 100%;
+}
+
+.title,
+.title img {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: initial;
+  border-radius: initial;
+  background-color: initial;
+  transition: initial;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: initial;
+}
+
+.close,
+.close:hover,
+.close:not(:disabled):not(.disabled):focus,
+.close:not(:disabled):not(.disabled):hover {
+  text-shadow: initial;
+  opacity: 1;
+}
+
+/*---- nav ----*/
+nav {
+  position: fixed;
+  top: 0;
+  height: 90px;
+  background: #292e31;
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
+  z-index: 5;
+}
+
+nav .container {
+  position: absolute;
+  height: 66px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  position: absolute;
+  top: -5px;
+}
+
+nav .menu {
+  position: relative;
+  padding-left: 190px;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: 45px;
+  height: 66px;
+}
+
+nav ul li a,
+nav ul li .sub_menu {
+  display: block;
+  padding-bottom: 0.3rem;
+  height: 100%;
+  color: #fff;
+  font-weight: 500;
+  line-height: 66px;
+  letter-spacing: 1.5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+nav ul li:hover a,
+nav ul li:hover .sub_menu {
+  color: #aedfff;
+  text-decoration: none;
+}
+
+nav ul li a span::after,
+nav ul li .sub_menu span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 4px;
+  background: #aedfff;
+  transition: width 0.5s;
+}
+
+nav ul li:hover a span::after,
+nav ul li:hover .sub_menu span::after {
+  width: 100%;
+}
+
+nav .sub_menu {
+  padding-right: 15px;
+}
+
+nav .sub_menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 5px solid #fff;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  margin-top: 2px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .sub_menu:hover::after {
+  border-top: 5px solid #aedfff;
+}
+
+nav .sub_list {
+  position: absolute;
+  width: 135px;
+  top: 66px;
+  left: -15px;
+  background: #292e31;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  pointer-events: none;
+}
+
+nav .sub_list.open,
+nav .sub_menu:hover .sub_list {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+nav .sub_list li {
+  display: block;
+  margin-right: initial;
+  width: 100%;
+  height: auto;
+}
+
+nav .sub_list li a {
+  padding: 10px 15px 15px;
+  line-height: initial;
+}
+
+nav ul li:hover .sub_list li a {
+  color: #fff;
+}
+
+nav ul li:hover .sub_list li a:hover {
+  background: #485156;
+}
+
+nav .sub_list li a span::after {
+  display: none;
+}
+
+.menu_right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.snslink,
+.music {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.snslink a {
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0;
+  margin-left: 2px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.snslink a:hover {
+  background: #aedfff;
+}
+
+.open_menu {
+  display: none;
+}
+
+/*---- music ----*/
+.music {
+  margin-right: 5px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.music span {
+  position: absolute;
+  width: 4px;
+  bottom: 0;
+  background: #fff;
+}
+
+.music .s1 {
+  height: 11px;
+  right: 0px;
+}
+
+.music .s2 {
+  height: 21px;
+  right: 10px;
+}
+
+.music .s3 {
+  height: 28px;
+  right: 20px;
+}
+
+.music .s4 {
+  height: 13px;
+  right: 30px;
+}
+
+.music.active .s1 {
+  animation: wave 0.66s linear infinite;
+}
+
+.music.active .s2 {
+  animation: wave 0.8s linear infinite;
+}
+
+.music.active .s3 {
+  animation: wave 0.7s linear infinite;
+}
+
+.music.active .s4 {
+  animation: wave 0.5s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 28px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+/*---- header ----*/
+header {
+  padding-bottom: 2%;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+  z-index: 1;
+}
+
+header .sec_bg {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/header/home_250923.jpg)
+    no-repeat center bottom;
+  background-size: cover;
+  overflow: hidden;
+  margin-top: 3%;
+}
+
+.sec_bg,
+.sec_bg video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+header .container {
+  position: relative;
+  padding-top: 20%;
+  text-align: center;
+  z-index: 4;
+}
+
+.btn_video {
+  z-index: 2;
+  display: block;
+  position: relative;
+  margin: 0 auto 5%;
+  max-width: 100px;
+  transition: 0.6s;
+}
+
+.btn_video img {
+  position: absolute;
+  width: 100%;
+  margin-top: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: hue-rotate(36deg);
+}
+
+.rotate {
+  animation: 3s rotate ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+.slogan {
+  z-index: 1;
+  display: block;
+  position: relative;
+  margin: 2% auto;
+  width: 55%;
+}
+
+.bottom {
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.qrcode,
+header .btn_store {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .btn_store {
+  margin-left: 7px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+header .btn_store a {
+  display: inline-block;
+  padding: 0.5%;
+}
+
+header .btn_store a.google_play,
+header .btn_store a.windows,
+header .btn_store a.appgallery,
+header .btn_store a.playstation {
+  display: inline-block;
+  width: 35%;
+}
+
+header .btn_store a.app_store,
+header .btn_store a.apk {
+  display: inline-block;
+  width: 28.5%;
+}
+
+/*---- news ----*/
+.news {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/bg_home.webp)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.news::before,
+.features::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: skew 7s ease-in-out infinite;
+}
+
+@keyframes skew {
+  0% {
+    transform: skewY(0deg);
+  }
+
+  25% {
+    transform: skewY(-2deg);
+  }
+
+  50% {
+    transform: skewY(0deg);
+  }
+
+  75% {
+    transform: skewY(-2deg);
+  }
+
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+.news .content {
+  position: relative;
+  margin: 2.5rem auto;
+}
+
+.bn {
+  display: inline-block;
+  max-width: 408px;
+}
+
+.carousel-indicators {
+  z-index: 2;
+}
+
+.news_content {
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
+  width: 100%;
+  background: #2a98df;
+}
+
+.pattern span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/pattern.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.pattern span:nth-child(1) {
+  top: 2px;
+  left: 2px;
+}
+
+.pattern span:nth-child(2) {
+  top: 2px;
+  right: 2px;
+  transform: scaleX(-1);
+}
+
+.pattern span:nth-child(3) {
+  bottom: 2px;
+  left: 2px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/pattern_bottom.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.pattern span:nth-child(4) {
+  bottom: 2px;
+  right: 2px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/pattern_bottom.png)
+    no-repeat center top;
+  background-size: cover;
+  transform: scaleX(-1);
+}
+
+.news_frame {
+  padding: 20px;
+  background: linear-gradient(0deg, #272f47, #444d69);
+}
+
+.news_inner {
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  max-width: 630px;
+  width: 100%;
+  vertical-align: top;
+}
+
+.news_list {
+  border-bottom: 2px solid #ffffff;
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.news_list li {
+  display: inline-block;
+  padding: 3px 30px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.news_list li.active {
+  color: #39508f;
+  background: #ffffff;
+}
+
+.more {
+  position: absolute;
+  padding: 3px 30px;
+  padding-left: 60px;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, transparent 25px, #2a98df 0) left;
+}
+
+.more:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.news_list_item {
+  display: none;
+}
+
+.news_list_item.active {
+  display: block;
+}
+
+.news_list_item ul {
+  list-style: none;
+  opacity: 0;
+  z-index: 1;
+}
+
+.news_list_item.active ul {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.news_list_item ul li {
+  display: block;
+  width: 100%;
+}
+
+.news_list_item ul li a {
+  border-bottom: 1px solid #2f80bb;
+  position: relative;
+  display: block;
+  padding: 15px 0;
+  padding-left: 15px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+}
+
+.news_list_item ul li a:hover {
+  text-decoration: none;
+  background: linear-gradient(90deg, #00558b, rgba(255, 255, 255, 0));
+}
+
+.news_list_item ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  bottom: 0;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/news/pattern.png)
+    no-repeat center top;
+  background-size: cover;
+  transform: scale(-1);
+}
+
+.news_list_item ul li .newsdetails-badge,
+.newsdetails-newsbadge,
+.newsdetails-sysbadge {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 15px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.news_list_item ul li .newsdetails-newsbadge,
+.latestnews .newsdetails-newsbadge {
+  background: linear-gradient(-45deg, transparent 5px, #e51737 0) right,
+    linear-gradient(135deg, transparent 5px, #e51737 0) left;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+}
+
+.news_list_item ul li .newsdetails-sysbadge,
+.newsdetails .newsdetails-sysbadge {
+  background: linear-gradient(-45deg, transparent 5px, #3a92cb 0) right,
+    linear-gradient(135deg, transparent 5px, #3a92cb 0) left;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+}
+
+.news_list_item ul li .newsdetails-actbadge,
+.newsdetails .newsdetails-actbadge {
+  background: linear-gradient(-45deg, transparent 5px, #66950b 0) right,
+    linear-gradient(135deg, transparent 5px, #66950b 0) left;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+}
+
+.news_list_item .system-title {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.news_list_item .system-title .tt {
+  display: inline;
+  margin-bottom: initial;
+}
+
+.news_list_item .systemtime {
+  display: block;
+  color: rgb(255 255 255 / 50%);
+  font-size: 14px;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+/*---- portrait ----*/
+.portrait {
+  position: relative;
+  height: 55rem;
+  overflow: hidden;
+}
+
+.role {
+  display: none;
+}
+
+.role.active {
+  display: block;
+}
+
+.role_info {
+  position: relative;
+  margin-top: 8rem;
+  opacity: 0;
+  z-index: 1;
+}
+
+.role.active .role_info {
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.role_name {
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+.cv,
+.cv_not {
+  display: inline-block;
+  margin: 1.5rem auto;
+  margin-left: 3.5rem;
+  max-width: 254px;
+  width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.cv_not {
+  cursor: default;
+}
+
+.cv:hover {
+  filter: brightness(1.15);
+}
+
+.role_txt {
+  top: 50px;
+  position: relative;
+  margin-left: 3.5rem;
+  width: 393px;
+  height: 138px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/info_bg.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_txt1 {
+  top: 30px;
+  position: relative;
+  margin-left: 3.5rem;
+  width: 393px;
+  height: 138px;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/info_bg.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_txt p {
+  padding: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+.role_txt1 p {
+  padding: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+.slash1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.slash,
+.role_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.role.active .role_img {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.portrait .mask {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/mask.png)
+    no-repeat center bottom;
+  background-size: cover;
+}
+
+.slash {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/slash.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.slash1 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/slash1.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role.r1 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role62.png)
+    no-repeat center top;
+  background-size: contain;
+}
+
+.role.r2 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role61.png)
+    no-repeat center top;
+  background-size: contain;
+}
+
+.role.r3 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role60.png)
+    no-repeat center top;
+  background-size: contain;
+}
+
+.role.r4 .role_img {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role59.png)
+    no-repeat center top;
+  background-size: contain;
+}
+
+.role_list {
+  position: relative;
+  margin-top: 5.5rem;
+  padding-left: 4rem;
+  width: 100%;
+}
+
+.role_list li {
+  display: inline-block;
+  margin: 0.5rem;
+  width: 112px;
+  height: 126px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.role_list .r1 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list62.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .r1.active,
+.role_list .r1:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list62_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .r2 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list61.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .r2.active,
+.role_list .r2:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list61_active.png)
+    no-repeat center top;
+  background-size: 100%;
+}
+
+.role_list .r3 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list60.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .r3.active,
+.role_list .r3:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list60_active.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .r4 {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list59.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.role_list .r4.active,
+.role_list .r4:hover {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role_list59_active.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+.portrait .btn {
+  position: relative;
+  padding: initial;
+  max-width: 1140px;
+  width: 100%;
+  z-index: 1;
+}
+
+.portrait .btn a {
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+  transform: translateY(5px);
+  transition: 0.5s;
+}
+
+.portrait .btn a:hover {
+  transform: translateY(-5px);
+}
+
+/*---- features ----*/
+.features {
+  padding: 4% 0 6%;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/features/bg.jpg)
+    no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.features .container {
+  max-width: initial;
+}
+
+.features .content {
+  margin: -2% auto;
+}
+
+.feature {
+  padding-top: calc(25 / 1920 * 100vw);
+  padding-bottom: calc(85 / 1920 * 100vw);
+  width: calc(1850 / 1920 * 100vw);
+  transform: scale(0.8);
+  z-index: 2;
+}
+
+.feature .swiper-slide {
+  width: calc(864 / 1920 * 100vw);
+  opacity: 0;
+  padding-left: 0.2%;
+  padding-top: 0.2%;
+  overflow: hidden;
+}
+
+.feature .swiper-slide-active,
+.feature .swiper-slide-prev,
+.feature .swiper-slide-next {
+  opacity: 1;
+}
+
+.feature .swiper-slide img {
+  opacity: 0.8;
+  transition: all 0.33s linear;
+}
+
+.feature .swiper-slide img.img-fluid {
+  width: 100%;
+}
+
+.feature .swiper-slide-active img {
+  opacity: 1;
+}
+
+.feature_prev,
+.feature_next {
+  position: absolute;
+  display: block;
+  margin-top: calc(-25 / 1920 * 100vw);
+  width: calc(34 / 1920 * 100vw);
+  height: calc(158 / 1920 * 100vw);
+  top: 50%;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/features/arrow.png)
+    no-repeat center top;
+  background-size: contain;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.feature_prev {
+  left: 24.1vw;
+}
+
+.feature_next {
+  right: 23.9vw;
+  transform: translateY(-50%) scale(-1);
+}
+
+.feature_pagination {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 1rem;
+}
+
+.feature_pagination .swiper-pagination-bullet {
+  border-radius: initial;
+  width: calc(20 / 1920 * 100vw);
+  height: calc(31 / 1920 * 100vw);
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/features/pagination.png)
+    no-repeat center top;
+  background-size: cover;
+  opacity: 1;
+}
+
+.feature_pagination .swiper-pagination-bullet-active {
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/features/pagination_hover.png)
+    no-repeat center top;
+  background-size: cover;
+}
+
+/*---- fans ----*/
+.fans {
+  padding: 1% 0 0;
+  height: 46vw;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/fans/bg_20250923.jpg)
+    no-repeat center top;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.fans .title img {
+  filter: hue-rotate(163deg);
+}
+
+#scene,
+#scene .role {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+#scene .role img {
+  width: 100%;
+}
+
+#scene .role.r1 {
+  margin-left: 0%;
+}
+
+.fans .content {
+  position: relative;
+  margin: 1.5% auto 2.5%;
+  margin-right: 0%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.fans .fb_container {
+  position: relative;
+  padding: 5px;
+  background: #e26b9f;
+}
+
+.fans .fans_btn {
+  position: relative;
+  margin: 0 auto;
+}
+
+.fb_frame {
+  padding: 20px 0;
+  width: 100%;
+  background: #ffffff;
+}
+
+#fb_main {
+  height: 540px;
+}
+
+.fans_btn img {
+  filter: hue-rotate(95deg);
+  margin-top: 3.5%;
+  transition: 0.5s;
+}
+
+.fans_btn img:hover {
+  filter: hue-rotate(357deg);
+  transition: 0.5s;
+}
+
+/*---- gameinfo ----*/
+.gameinfo {
+  padding: 2rem 0;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/bg_gameinfo.jpg)
+    no-repeat center bottom;
+  background-size: cover;
+}
+
+.gameinfo .game,
+.gameinfo .icon,
+.gameinfo .info,
+.gameinfo .customer {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.gameinfo .icon {
+  max-width: 195px;
+}
+
+.gameinfo .info {
+  margin: 0 15px;
+  max-width: 590px;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+  user-select: none;
+}
+
+.gameinfo .info h3 {
+  color: white;
+  margin: 0 auto 5px;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.gameinfo .info p {
+  color: white;
+  margin-bottom: initial;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+}
+
+.gameinfo .customer {
+  max-width: 285px;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.gameinfo .customer .btn_store {
+  text-align: center;
+}
+
+.gameinfo .customer .btn_store a {
+  display: inline-block;
+  padding: 0.5% 0;
+}
+
+.gameinfo .customer .btn_store a.google_play,
+.gameinfo .customer .btn_store a.windows,
+.gameinfo .customer .btn_store a.appgallery {
+  width: 54%;
+}
+
+.gameinfo .customer .btn_store a.app_store,
+.gameinfo .customer .btn_store a.apk,
+.gameinfo .customer .btn_store a.playstation {
+  width: 44%;
+}
+
+.gameinfo .btn {
+  border-radius: 5px;
+  display: block;
+  margin: 4px 2px 0;
+  padding: 8px 0;
+  width: 99%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background: url(https://images1.iwplay.com.tw/image/ht/main/images/btn_customer.jpg)
+    no-repeat center top;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.gameinfo .btn:hover {
+  filter: brightness(1.1);
+}
+
+/*---- footer ----*/
+footer {
+  padding: 15px 0;
+  color: #fefefe;
+  background: #292e31;
+}
+
+footer .company {
+  margin-right: 8px;
+}
+
+footer .copyright {
+  margin-right: 50px;
+  line-height: 20px;
+}
+
+footer p,
+footer ul,
+footer li {
+  opacity: 1;
+}
+
+footer p a:hover {
+  color: #aedfff;
+}
+
+/*---- pop-ads ----*/
+.pop-ads {
+  text-align: center;
+}
+
+.pop-ads img {
+  width: 90%;
+}
+
+@media (max-width: 1920px) {
+  nav {
+    height: 90px;
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/bg_nav.png)
+      no-repeat center bottom;
+    background-size: cover;
+  }
+
+  nav .container {
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: initial;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+  }
+
+  .role.r1 .role_img,
+  .role.r2 .role_img,
+  .role.r3 .role_img,
+  .role.r4 .role_img {
+    background-size: cover;
+  }
+
+  .feature {
+    transform: scale(1);
+  }
+
+  .fans {
+    height: initial;
+  }
+}
+
+@media (max-width: 1300px) {
+  .btn_video {
+    max-width: 75px;
+  }
+
+  .btn_video img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slogan {
+    margin: 0 auto;
+    width: 45%;
+  }
+
+  .bottom {
+    margin: 1.5rem auto;
+  }
+
+  .title {
+    max-width: 380px;
+  }
+
+  .news .content {
+    margin: 2rem auto;
+  }
+
+  .news_content {
+    max-width: 800px;
+  }
+
+  .pattern span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .news_frame {
+    padding: 15px;
+  }
+
+  .bn {
+    max-width: 340px;
+  }
+
+  .news_inner {
+    margin-left: 15px;
+    max-width: 405px;
+  }
+
+  .news_list li {
+    padding: 3px 15px;
+  }
+
+  .news_list_item ul li a {
+    padding: 8px 0 6px;
+  }
+
+  .portrait {
+    height: 43rem;
+  }
+
+  .role_info {
+    margin-top: 4rem;
+  }
+
+  .role_name {
+    max-width: 350px;
+  }
+
+  .cv_not {
+    max-width: 200px;
+    margin-left: 2.6rem;
+  }
+
+  .role_txt {
+    margin-left: 2.6rem;
+  }
+
+  .role_txt1 {
+    margin-left: 2.6rem;
+  }
+
+  .role_list {
+    margin-top: 4rem;
+    padding-left: 3rem;
+  }
+
+  .role_list li {
+    padding-bottom: 9%;
+    width: 8%;
+    height: auto;
+  }
+
+  .portrait .btn a {
+    max-width: 240px;
+  }
+
+  .features {
+    padding: 6% 0;
+  }
+
+  .fans #scene {
+    display: none;
+  }
+
+  .fans .content {
+    margin: 1% auto 3%;
+    max-width: 340px;
+  }
+
+  .fb_frame {
+    padding: 15px;
+    padding-right: 0;
+  }
+
+  #fb_main {
+    width: 340px;
+    height: 420px;
+  }
+
+  .fans_btn img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/bg_nav_pad.png)
+      no-repeat left bottom;
+    background-size: cover;
+  }
+
+  nav .container {
+    max-width: initial;
+  }
+
+  nav .menu {
+    padding-left: 155px;
+  }
+
+  nav ul li {
+    margin-right: 22px;
+  }
+
+  .qrcode {
+    display: none;
+  }
+
+  .gameinfo {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/bg_gameinfo_m.jpg)
+      no-repeat center bottom;
+    background-size: cover;
+  }
+
+  .gameinfo .game {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .gameinfo .icon {
+    max-width: 175px;
+  }
+
+  .gameinfo .customer {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .gameinfo .customer .btn_store {
+    text-align: left;
+  }
+
+  .gameinfo .customer .btn_store a.google_play,
+  .gameinfo .customer .btn_store a.appgallery {
+    width: 27%;
+  }
+
+  .gameinfo .customer .btn_store a.app_store,
+  .gameinfo .customer .btn_store a.apk {
+    width: 22%;
+  }
+
+  .gameinfo .customer .btn_store a.windows,
+  .gameinfo .customer .btn_store a.playstation {
+    display: none;
+  }
+
+  .gameinfo .customer .btn {
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  footer {
+    padding: 10px 0;
+    height: auto;
+    background: #292e31;
+  }
+
+  footer .copyright,
+  footer .company,
+  footer p,
+  footer .grading {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+  }
+
+  footer .copyright {
+    margin-bottom: 20px;
+  }
+
+  footer ul {
+    text-align: left;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    height: 65px;
+  }
+
+  nav .container {
+    height: 45px;
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/bg_nav_m.png)
+      no-repeat center top;
+  }
+
+  .logo {
+    max-width: 90px;
+  }
+
+  nav .menu {
+    position: fixed;
+    padding: 15px 0;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    background: #292e31;
+    transition: 0.5s top;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  nav .menu.open {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    top: 45px;
+    left: 0;
+    opacity: 1;
+    transition: 0.5s top;
+    pointer-events: initial;
+  }
+
+  nav .menu ul {
+    padding: 10px 40px;
+    width: 100%;
+  }
+
+  nav .menu ul li {
+    position: relative;
+    display: block;
+    margin-right: initial;
+    height: auto;
+    text-align: left;
+  }
+
+  nav .menu ul li a,
+  nav .menu .sub_menu {
+    position: relative;
+    display: block;
+    padding: 6px 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: initial;
+    background: #292e31;
+    transition: inherit;
+    z-index: 1;
+  }
+
+  nav .menu ul li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 15px;
+  }
+
+  nav .menu .sub_menu {
+    padding: 6px 0;
+    background: #292e31;
+    z-index: 0;
+  }
+
+  nav .menu .sub_menu span {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #292e31;
+    z-index: 2;
+  }
+
+  nav .menu .sub_menu span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 5px solid #fff;
+    border-left: 3.5px solid transparent;
+    border-right: 3.5px solid transparent;
+    margin-top: 2px;
+    top: 50%;
+    right: 0;
+    left: initial;
+    transform: translateY(-50%);
+    background: initial;
+    transition: initial;
+  }
+
+  nav .menu .sub_menu:hover span::after {
+    width: 0;
+    border-top: 5px solid #aedfff;
+  }
+
+  nav ul li a span::after,
+  nav .menu .sub_menu::after,
+  nav .menu .sub_list span::after {
+    display: none;
+  }
+
+  nav .menu .sub_list {
+    position: relative;
+    margin-top: -105px;
+    padding: 8px 18px;
+    width: 100%;
+    top: initial;
+    left: initial;
+    opacity: 0;
+    background: #485156;
+    transition: 0.5s ease;
+    z-index: 0;
+  }
+
+  nav .menu .sub_list::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: #292e31;
+    z-index: 1;
+  }
+
+  nav .sub_menu:hover .sub_list {
+    opacity: 0;
+  }
+
+  nav .sub_list.open {
+    margin-top: 15px;
+    opacity: 1 !important;
+  }
+
+  nav .menu .sub_list li:last-child {
+    border: initial;
+    padding-bottom: 0;
+  }
+
+  nav .menu .sub_list li a {
+    padding: 0;
+    padding-bottom: 6px;
+    background: #485156;
+    z-index: -1;
+  }
+
+  nav .menu .sub_list.open li a {
+    z-index: 0;
+  }
+
+  nav .menu .sub_list li a:hover {
+    color: #aedfff;
+  }
+
+  nav .menu .sub_list li a span {
+    background: #485156;
+  }
+
+  .open_menu {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .open_menu span.btn {
+    display: block;
+    position: relative;
+    margin-top: 8px;
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  .open_menu .btn span {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  .open_menu .btn span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+
+  .open_menu .btn span:nth-child(2) {
+    top: 18px;
+    transform-origin: left center;
+  }
+
+  .open_menu .btn span:nth-child(3) {
+    top: 36px;
+    transform-origin: left center;
+  }
+
+  .open_menu.close .btn span:nth-child(1) {
+    top: -3px;
+    left: 8px;
+    transform: rotate(45deg);
+  }
+
+  .open_menu.close .btn span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .open_menu.close .btn span:nth-child(3) {
+    top: 40px;
+    left: 8px;
+    transform: rotate(-45deg);
+  }
+
+  .menu_right {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+    padding: 0 40px;
+    text-align: right;
+  }
+
+  .menu_right::before {
+    content: "社群";
+    display: block;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transform: translateY(-50%);
+  }
+
+  .music {
+    display: none;
+  }
+
+  header {
+    padding: 4% 0;
+  }
+
+  header .container {
+    padding-top: 77%;
+  }
+
+  .slogan {
+    margin: 0 auto -3%;
+    width: 65%;
+  }
+
+  .bottom {
+    margin: 3rem auto 0;
+  }
+
+  header .btn_store {
+    margin: 0 auto;
+    max-width: 650px;
+    text-align: center;
+  }
+
+  header .btn_store a.windows,
+  header .btn_store a.apk,
+  header .btn_store a.playstation {
+    display: none;
+  }
+
+  header .btn_store a.google_play,
+  header .btn_store a.appgallery {
+    width: 30%;
+  }
+
+  header .btn_store a.app_store {
+    width: 25%;
+  }
+
+  header .header_p {
+    display: none !important;
+  }
+
+  .news {
+    padding: 20px 0;
+    background-position: right bottom;
+  }
+
+  .news .content {
+    margin: 1rem auto;
+  }
+
+  .bn,
+  .news_content,
+  .news_inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .news_inner {
+    margin: 10px auto;
+  }
+
+  .portrait {
+    height: 65rem;
+  }
+
+  .role_info {
+    margin-top: 28rem;
+  }
+
+  .cv,
+  .cv_not {
+    margin: 1rem auto;
+    margin-left: 0;
+    padding-left: 2.8rem;
+    max-width: 250px;
+  }
+
+  .role_txt {
+    top: 20px;
+    margin-left: 2.8rem;
+  }
+
+  /*.role.r1 .role_img,
+    .role.r2 .role_img,
+    .role.r3 .role_img,
+    .role.r4 .role_img {
+        background-position: 65% top;
+    }*/
+
+  .role_txt1 {
+    margin-left: 2.8rem;
+  }
+
+  .role.r1 .role_img,
+  .role.r2 .role_img,
+  .role.r3 .role_img,
+  .role.r4 .role_img {
+    background-position: 74% top;
+  }
+
+  .role_list {
+    margin-top: 2rem;
+    padding-left: 3.5rem;
+  }
+
+  .role_list li {
+    padding-bottom: 12.5%;
+    width: 11%;
+    height: auto;
+  }
+
+  .portrait .btn {
+    margin-top: 1rem;
+    padding-left: 3.5rem;
+    max-width: 280px;
+    text-align: left;
+  }
+
+  .portrait .btn a {
+    position: relative;
+    bottom: initial;
+    transform: initial;
+    transition: initial;
+  }
+
+  .features,
+  .fans {
+    padding: 4rem 0;
+  }
+
+  .feature {
+    padding-top: 0;
+    padding-bottom: 5rem;
+    width: 100%;
+  }
+
+  .features .content {
+    margin: 2.5rem auto 0;
+    max-width: 550px;
+  }
+
+  .feature .swiper-slide {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .feature_prev,
+  .feature_next {
+    display: none;
+  }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 0.7rem;
+  }
+
+  .feature_pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 23px;
+  }
+
+  .fans .content {
+    margin: 2rem auto;
+  }
+
+  #fb_main {
+    height: 540px;
+  }
+
+  .fans_btn img {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 845px) {
+  .gameinfo {
+    background-position: right bottom;
+  }
+
+  .gameinfo .game {
+    margin-bottom: initial;
+  }
+
+  .gameinfo .icon {
+    max-width: 160px;
+  }
+
+  .gameinfo .info {
+    display: block;
+    margin: 5px auto 15px;
+    max-width: 535px;
+  }
+
+  .gameinfo .info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .gameinfo .customer {
+    max-width: 550px;
+  }
+
+  .gameinfo .customer .btn_store a {
+    margin: 0 -0.2%;
+  }
+
+  .gameinfo .customer .btn {
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    padding-top: 65%;
+  }
+
+  .portrait {
+    height: 55rem;
+  }
+
+  .role_info {
+    margin-top: 20rem;
+  }
+
+  .role_list {
+    margin-top: 1rem;
+  }
+
+  .role_list li {
+    padding-bottom: 14%;
+    width: 12.5%;
+    height: auto;
+  }
+
+  .fans {
+    padding: 10% 0 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 1.5rem 0;
+  }
+
+  header .container {
+    padding-top: 23.5rem;
+  }
+
+  .btn_video {
+    margin: 0 auto 10%;
+    width: 60px;
+  }
+
+  .btn_video img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slogan {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .bottom {
+    margin-top: 2rem;
+  }
+
+  header .btn_store a.google_play,
+  header .btn_store a.appgallery {
+    width: 35%;
+  }
+
+  header .btn_store a.app_store {
+    width: 29%;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    max-width: 280px;
+  }
+
+  .news_content,
+  .fb_container {
+    left: 0%;
+    padding: 4px;
+  }
+
+  .banner .carousel-indicators {
+    bottom: -2px;
+  }
+
+  .news_list {
+    font-size: 16px;
+  }
+
+  .news_list li {
+    padding: 3px 20px;
+  }
+
+  .news_list_item ul li a::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .news_list_item .systemtime {
+    font-size: 12px;
+  }
+
+  .more {
+    font-size: 13px;
+  }
+
+  .portrait {
+    padding: 1.5% 0 5%;
+    height: initial;
+  }
+
+  .role_info {
+    margin-top: 16rem;
+  }
+
+  .role_name {
+    max-width: 270px;
+  }
+
+  .cv,
+  .cv_not {
+    position: relative;
+    display: block;
+    margin: 0 auto 1rem;
+    margin-right: 0;
+    padding-left: initial;
+    max-width: 220px;
+    width: 50%;
+    text-align: right;
+  }
+
+  .role_txt {
+    top: 0px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    width: 100%;
+    height: 6rem;
+    background: rgb(41 41 41 / 80%);
+  }
+
+  .role_txt p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .role_txt1 {
+    top: 0px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    width: 100%;
+    height: 6rem;
+    background: rgb(41 41 41 / 80%);
+  }
+
+  .role_txt1 p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .slash1 {
+    background-position: 75% top;
+  }
+
+  .slash {
+    background-position: 75% top;
+  }
+
+  .role.r1 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role62_m.png)
+      no-repeat;
+  }
+
+  .role.r2 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role61_m.png)
+      no-repeat;
+  }
+
+  .role.r3 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role60_m.png)
+      no-repeat;
+  }
+
+  .role.r4 .role_img {
+    background: url(https://images1.iwplay.com.tw/image/ht/main/images/portrait/role59_m.png)
+      no-repeat;
+  }
+
+  .role.r1 .role_img,
+  .role.r2 .role_img,
+  .role.r3 .role_img,
+  .role.r4 .role_img {
+    margin-top: -12%;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .role_list {
+    margin-top: 0.5rem;
+    padding-left: initial;
+    text-align: center;
+  }
+
+  .role_list li {
+    margin: 0.3rem;
+    padding-bottom: 22%;
+    width: 19%;
+  }
+
+  .portrait .btn {
+    position: relative;
+    display: block;
+    margin: 0.5rem auto 0;
+    padding-left: initial;
+    max-width: 220px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .feature {
+    padding-bottom: 3.5rem;
+  }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 0.5rem;
+  }
+
+  .feature_pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 20px;
+  }
+
+  .fans .content {
+    margin: 1.5rem auto;
+    max-width: 340px;
+    width: 100%;
+  }
+
+  .fb_frame {
+    padding: 0;
+  }
+
+  .fans .pattern {
+    display: none;
+  }
+
+  #fb_main {
+    width: 100%;
+    height: 440px;
+  }
+
+  .fans_btn img {
+    max-width: 180px;
+  }
+
+  .gameinfo {
+    background-position: 95% bottom;
+  }
+
+  .gameinfo .info,
+  .gameinfo .customer {
+    max-width: 360px;
+  }
+
+  .gameinfo .customer .btn_store a.google_play,
+  .gameinfo .customer .btn_store a.windows,
+  .gameinfo .customer .btn_store a.appgallery {
+    width: 54.5%;
+  }
+
+  .gameinfo .customer .btn_store a.app_store,
+  .gameinfo .customer .btn_store a.apk,
+  .gameinfo .customer .btn_store a.playstation {
+    width: 44.5%;
+  }
+
+  .gameinfo .customer .btn {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .container {
+    padding-top: 19rem;
+  }
+
+  .role_info {
+    margin-top: 23.5rem;
+  }
+
+  .role_txt p {
+    font-size: 12px;
+  }
+
+  .role_txt1 p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 370px) {
+  .gameinfo .customer .btn_store a.btn {
+    padding: 2.2% 0 2.6%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  footer .grading img {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 340px) {
+  .news_list li {
+    padding: 3px 8px;
+  }
+
+  .role_txt {
+    height: 9rem;
+  }
+
+  .role_txt1 {
+    height: 9rem;
+  }
+
+  .gameinfo .customer .btn_store a {
+    margin: 0 -0.45%;
+  }
+
+  .gameinfo .customer .btn_store a.btn {
+    padding: 2.2% 0 2.8%;
+    line-height: 15px;
+  }
+
+  footer .company img {
+    margin: 8px 3px;
+  }
+}
